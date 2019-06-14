@@ -11,3 +11,78 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media (max-width: 575.98px) {
+  /* arrow que va va al inicio de la pantalla, en Responsive menor de 520 */
+  .flotante {
+      width: 100%;
+      display: scroll;
+      position: relative;
+      top: 34px;
+      left: 3%;
+      margin-top: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .flotante {
+      display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .flotante {
+      display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .flotante {
+      display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flotante {
+      display: none;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  color: rgb(0, 111, 175);
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  color: rgb(0, 111, 175);
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  color: rgb(0, 111, 175);
+}
+
+h4 {
+  text-align: center;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+h5 {
+  text-align: center;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  color: rgb(0, 111, 175);
+}
+
+p {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  ;
+  font-size: 14px;
+  text-align: justify;
+  text-indent: 10px;
+  line-height: 20px;
+  color: rgb(0, 50, 78);
+}
