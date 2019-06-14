@@ -1,17 +1,22 @@
-import React, { Component } from 'react'
-import {Container, Button} from 'semantic-ui-react'
-import mensaje from './mensaje' 
-/* import root from './root.js' */
+import React from 'react'
+import { Container, Button } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
-class App extends Component {
-  render () {
+import Mensaje from './Mensaje'
+import MiPrimerComponente from './Root'
+
+class App extends React.Component {
+  render() {
     return (
-      <Container textAlign='center'>
-        <mensaje size='30px' color='#ff0000' contenido='AHORA' />
-        <mensaje size='40px' color='#00ff00' contenido='ENTIENDO' />
-        <mensaje size='60px' color='#0000ff' contenido='LOS PROPS :D' />
-        <Button content='Boton Cool' color='blue' />        
-      </Container>
+      <div>
+        <Container textAlign='center'>
+          <Mensaje size='16px' color='#ff0000' contenido='AHORA' />
+          <Mensaje size='14px' color='#00ff00' contenido='ENTIENDO' />
+          <Mensaje size='10px' color='#0000ff' contenido='LOS PROPS :D' />
+          <Button content='Boton Coooool' color='blue' />
+          <MiPrimerComponente />
+        </Container>
+      </div>
     )
   }
 }

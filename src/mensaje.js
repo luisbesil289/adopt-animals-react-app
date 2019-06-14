@@ -1,14 +1,15 @@
-import React, {Component} from 'react'
-class mensaje extends Component {
-  render () {     
-
-    const styles = {
-      color: this.props.color,
-      fontSize: this.props.size
-    }
-    return (
-      <h3 style={styles}>{this.props.contenido}</h3>
-    )
+import React from 'react'
+class Mensaje extends React.Component {
+    render() {
+        const styles = {
+            color: this.props.color,
+            fontSize: this.props.size
+        }
+        return (
+            <div>
+                <h3 style={styles}>{this.props.contenido}</h3>
+            </div>
+        )
     }
 }
-export default mensaje
+export default Mensaje;
