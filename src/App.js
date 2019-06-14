@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navegacion from './Navegacion.js';
 import Logo from './Logo.js';
-
+import Footer from './Footer.js';
 
 
 class App extends React.Component {
@@ -11,6 +11,7 @@ class App extends React.Component {
       <div>      
         <Navegacion />
         <Logo />
+        <Footer />
       </div>
     )
   }
