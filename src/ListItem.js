@@ -14,8 +14,9 @@ class ListItem extends React.Component {
                          <img src="assets/dog_10.jpg" className="card-img-top" alt="... "></img> 
                         <div className="card-body">
                             <h5 className="card-title">Max</h5>
+                            <h5 className="card-title">{this.props.product.name}</h5>
                             <p className="card-text">
-                                Some quicktitle and make up the bulk of the card's content.
+                                Some quicktitle and make up the bulk of the card's conte nt.
                                         </p>
                             <a href="animal.html" className="btn btn-primary btn-block">Ver</a>
                         </div>
