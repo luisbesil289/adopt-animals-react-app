@@ -41,7 +41,6 @@ class Filtros extends React.Component {
                             <option value="1">M</option>
                             <option value="2">H</option>
                             <option defaultValue="3">todos</option>
-
                         </select>
                     </div>
                     <div className="form-group">

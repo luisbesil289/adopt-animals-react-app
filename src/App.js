@@ -3,7 +3,7 @@ import './App.css';
 import Navegacion from './Navegacion.js';
 import Logo from './Logo.js';
 import Filtros from './Filtros.js';
-import List from './List.js';
+import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 
 
@@ -14,10 +14,11 @@ class App extends React.Component {
       <div>
         <Navegacion />
         <Logo />
+        <hr />
         <div className="container">
           <div className="row">
-            <Filtros />
-            <List />            
+            
+            <NewAnimal />         
           </div>
         </div>
         <Footer />
