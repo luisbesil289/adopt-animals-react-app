@@ -5,6 +5,7 @@ import Logo from './Logo.js';
 import Filtros from './Filtros.js';
 import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
+import Animal from './Animal';
 
 
 
@@ -13,12 +14,12 @@ class App extends React.Component {
     return (
       <div>
         <Navegacion />
+        
         <Logo />
         <hr />
         <div className="container">
-          <div className="row">
-            
-            <NewAnimal />         
+          <div className="row">            
+            <Animal />         
           </div>
         </div>
         <Footer />
