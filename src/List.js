@@ -1,10 +1,14 @@
 import React from 'react';
+import Filtros from './Filtros';
 
 
 class List extends React.Component {
     render() {
         return (
-            <div className="col col-12 col-sm-10 col-md-10">
+            <div className="container">
+            <div className="row">    
+            <Filtros />
+            <div className="col col-12 col-sm-10 col-md-10">               
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-6 col-lg-4">
                         <div className="card cardLista">
@@ -79,8 +83,12 @@ class List extends React.Component {
                         </div>
                     </div>                   
                 </div>                
-            </div>
+                </div>
+                </div>
+                </div>
             
+
+           
 
         )
     }

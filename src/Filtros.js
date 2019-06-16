@@ -4,7 +4,6 @@ import './filtros.css';
 class Filtros extends React.Component {
     render() {
         return (
-
             <div className="serchVerticalL col col-2 d-none d-md-block">
                 <form className="form" action="">
 

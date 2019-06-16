@@ -2,12 +2,16 @@ import React from 'react';
 
 
 class ListItem extends React.Component {
+    constructor(...args){
+        super(...args)
+
+    }
     render() {
         return (
             <div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-4">
                     <div className="card cardLista">
-                        <img src="assets/dog_10.jpg" className="card-img-top" alt="... "></img>
+                         <img src="assets/dog_10.jpg" className="card-img-top" alt="... "></img> 
                         <div className="card-body">
                             <h5 className="card-title">Max</h5>
                             <p className="card-text">
