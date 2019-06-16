@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Animal extends React.Component {
     render() {
         return (
@@ -30,7 +29,7 @@ class Animal extends React.Component {
                         consectetur adipisicing elit. Reprehenderit deserunt veniam tempora quibusdam blanditiis sequi sapiente voluptates dolorem fuga, repellendus corrupti dolore. Nostrum quos soluta explicabo, ea vel veniam optio tempore, fuga magnam
                         odio ullam similique rem est? Cupiditate, eos.
                     </p>
-                    <a href="wishlist.html"><button type="button" class="btn btn-secondary btn-block shadow p-1 rounded">Agregar a la Wishlist</button></a>
+                    <a href="/Wishlist"><button type="button" class="btn btn-secondary btn-block shadow p-1 rounded">Agregar a la Wishlist</button></a>
                     <hr />
 
                     <h4 class="card-text">Datos del Contacto</h4>

@@ -1,4 +1,5 @@
 import React from 'react';
+import List from './List';
 
 
 class Navegacion extends React.Component {
@@ -12,7 +13,7 @@ class Navegacion extends React.Component {
                 <div className="menuHorizontal collapse navbar-collapse" id="collapsibleNavbar">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href='List'>Lista <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href='/'{...List}>Lista <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item active">
                             <a className="nav-link" href="/List">Nuevo <span className="sr-only"></span></a>

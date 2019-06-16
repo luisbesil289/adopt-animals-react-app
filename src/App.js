@@ -6,7 +6,7 @@ import Filtros from './Filtros.js';
 import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 import Animal from './Animal';
-
+import List from './List';
 
 
 class App extends React.Component {
@@ -19,7 +19,7 @@ class App extends React.Component {
         <hr />
         <div className="container">
           <div className="row">            
-            <Animal />         
+            <List />         
           </div>
         </div>
         <Footer />
