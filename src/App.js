@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Logo from './Logo.js';
-import Filtros from './Filtros';
 import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 
@@ -48,7 +47,6 @@ currentSection() {
     }
   }
 
-
   render() {
     return (
       <div className="App">
@@ -78,11 +76,7 @@ currentSection() {
                  
         <Logo />
         <hr />
-        {this.currentSection()}
-             
-               
-          </div>
-        </div>
+        {this.currentSection()}         
         <Footer /> 
       </div>
     )
