@@ -11,11 +11,11 @@ class NewAnimal extends React.Component {
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <label for="inputNombre">Nombre</label>
+                                <label htmlfor="inputNombre">Nombre</label>
                                 <input type="text" class="form-control" placeholder="Nombre ..."></input>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputEmail4">Tipo</label>
+                                <label htmlfor="inputEmail4">Tipo</label>
                                 <select class="custom-select custom-select-md mb-3">
                                     <option selected disabled>Tipo ...</option>
                                     <option value="1">Perro</option>
@@ -23,7 +23,7 @@ class NewAnimal extends React.Component {
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputPassword4">Raza</label>
+                                <label htmlfor="inputPassword4">Raza</label>
                                 <select class="custom-select custom-select-md mb-3">
                                     <option selected disabled>Raza ...</option>
                                     <option value="1">Alano</option>
@@ -118,7 +118,7 @@ class NewAnimal extends React.Component {
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputEmail4">Barrio</label>
+                                <label htmlfor="inputEmail4">Barrio</label>
                                 <select class="custom-select custom-select-md mb-3">
                                     <option selected disabled>Barrio ...</option>
                                     <option value="1">Pocitos</option>
@@ -128,7 +128,7 @@ class NewAnimal extends React.Component {
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <label for="inputAddress2">Sexo</label>
+                                <label htmlfor="inputAddress2">Sexo</label>
                                 <select class="custom-select custom-select-md mb-3">
                                     <option selected disabled>Sexo ...</option>
                                     <option value="1">Macho</option>
@@ -136,11 +136,11 @@ class NewAnimal extends React.Component {
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputAddress2 col-md-4">Fecha de nacimiento</label>
+                                <label htmlfor="inputAddress2 col-md-4">Fecha de nacimiento</label>
                                 <input type="date" class="custom-select custom-select-md mb-3" name="bday"></input>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputAddress2 col-md-4">Color de ojos</label>
+                                <label htmlfor="inputAddress2 col-md-4">Color de ojos</label>
                                 <select class="custom-select custom-select-md mb-3">
                                     <option selected disabled>Color ...</option>
                                     <option value="1">Verdes</option>
@@ -153,7 +153,7 @@ class NewAnimal extends React.Component {
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputAddress2 col-md-4">Color de pelo</label>
+                                <label htmlfor="inputAddress2 col-md-4">Color de pelo</label>
                                 <select class="custom-select custom-select-md mb-3">
                                     <option selected disabled>Color ...</option>
                                     <option value="1">Blanco</option>
@@ -169,21 +169,21 @@ class NewAnimal extends React.Component {
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label for="inputCity">Nombre de contacto</label>
+                                <label htmlfor="inputCity">Nombre de contacto</label>
                                 <input type="text" class="form-control" id="inputCity" placeholder="Nombre ..."></input>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputState">Teléfono de contacto</label>
+                                <label htmlfor="inputState">Teléfono de contacto</label>
                                 <input type="text" class="form-control" id="inputCity" placeholder="Teléfono ..."></input>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputZip">Email de contacto</label>
+                                <label htmlfor="inputZip">Email de contacto</label>
                                 <input type="email" class="form-control" id="inputZip" placeholder="Email ..."></input>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="mb-3">
-                                <label for="validationTextarea">Descripción</label>
+                                <label htmlfor="validationTextarea">Descripción</label>
                                 <textarea class="form-control" id="validationTextarea" placeholder="Descripción ..."></textarea>
                                 <div class="invalid-feedback">
                                     Please enter a message in the textarea.

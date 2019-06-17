@@ -1,29 +1,14 @@
 import React from 'react';
 
-
 class ListItem extends React.Component {
-    constructor(...args){
-        super(...args)
-
-    }
     render() {
-        return (
-            <div>
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4">
-                    <div className="card cardLista">
-                         <img src="assets/dog_10.jpg" className="card-img-top" alt="... "></img> 
-                        <div className="card-body">
-                            <h5 className="card-title">Max</h5>
-                            <h5 className="card-title">{this.props.product.name}</h5>
-                            <p className="card-text">
-                                Some quicktitle and make up the bulk of the card's conte nt.
-                                        </p>
-                            <a href="animal.html" className="btn btn-primary btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div >
-        )
+      return (
+        <React.Fragment>
+          <h5 className="card-title">{this.props.product.name}</h5>
+          <p className="card-text">{this.props.product.description}</p>
+        </React.Fragment>
+      );
     }
-}
+  }
+  
 export default ListItem;

@@ -3,8 +3,7 @@ import './App.css';
 import Logo from './Logo.js';
 import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
-
-import List from './List';
+import Lists from './Lists';
 
 
 class App extends React.Component {
@@ -35,7 +34,7 @@ class App extends React.Component {
 
 currentSection() {
     if (this.state.section === 1) {
-      return <List />;
+      return <Lists />;
     }
 
     if (this.state.section === 2) {
@@ -84,3 +83,6 @@ currentSection() {
 }
 export default App;
 
+
+
+ 
