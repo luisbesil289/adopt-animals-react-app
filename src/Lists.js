@@ -1,58 +1,146 @@
 import React from 'react';
 import List from './List';
+import Filtros from './Filtros';
 
 
 class Lists extends React.Component {
-    constructor(props) {
-      super(props);
-      this.products = [
-        {
-          id: 1,
-          name: 'Car',
-          description: 'This is the awesome red car you always wanted to buy.',
-          foto: 'assets/dog_01.jpg'
-        }/* ,
-        {
-          id: 2,
-          name: 'House',
-          description: 'Buy this house now and you will get 50% off.'
-          
-        },
-        {
-          id: 3,
-          name: 'Pencil',
-          description: 'You can also buy the pack of 10 colors for the price of 5.'
-        },
-        {
-          id: 4,
-          name: 'Camera',
-          description: 'This brand new 50MP camera with x30 zoom is awesome!'
-        },
-        {
-          id: 5,
-          name: 'Mobile Phone',
-          description: 'Now you can receive messages from far away!'
-        },
-        {
-          id: 6,
-          name: 'Torch',
-          description: 'Now you can see at night. Warning do not use indoors!'
-        },
-        {
-          id: 7,
-          name: 'Coke',
-          description: 'My coke'
-        } */
-      ];
-    }
-  
-    render() {
-      return (
-        <section className="products">
-          {this.products.map(product => <List product={product} key={product.id} />)}
-        </section>
-      );
-    }
+  constructor(props) {
+    super(props);
+    this.animales = [
+      {
+        id: 1,
+        nombre: 'Misha',
+        tipo: 'Roberto',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/cat_03.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+      },
+      {
+        id: 2,
+        nombre: 'Roberto',
+        tipo: 'dog',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/dog_11.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+
+      },
+      {
+        id: 3,
+        nombre: 'Alf',
+        tipo: 'dog',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/dog_06.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+      },
+      {
+        id: 4,
+        nombre: 'Alf',
+        tipo: 'dog',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/dog_07.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+      },
+      {
+        id: 5,
+        nombre: 'Alf',
+        tipo: 'dog',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/dog_08.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+      },
+      {
+        id: 6,
+        nombre: 'Alf',
+        tipo: 'dog',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/dog_09.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+      },
+      {
+        id: 7,
+        nombre: 'Alf',
+        tipo: 'dog',
+        raza: 'Caniche',
+        barrio: 'Cordón',
+        sexo: 'M',
+        fecha: '16/06/2014',
+        ojos: 'Marrones',
+        pelo: 'Marrón',
+        nombreContacto: 'Juan Carlos Rodriguez',
+        telefonoContacto: '094 236 444',
+        emailContacto: 'l.besil@hotmail.com',
+        foto: 'assets/dog_10.jpg',
+        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+      }
+    ];
   }
-  
+
+  render() {
+    return (
+      <div>
+        <section className="products">
+          <div className="container">
+            <div className="row">
+              <Filtros />
+              <div className="col col-12 col-sm-8 col-md-8">
+                <div className="row">
+                  {this.animales.map(animal => <List animal={animal} key={animal.id} />)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+}
+
 export default Lists;
