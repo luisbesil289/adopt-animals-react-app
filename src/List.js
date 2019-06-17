@@ -55,7 +55,7 @@ class List extends React.Component {
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-6 col-lg-4">
                         <div className="card cardLista">
-                            <ListItem animales={this.props.animales.name} />
+                            <ListItem animales={this.props.animales} />
                             <img src="assets/dog_10.jpg" className="card-img-top" alt="... "></img>
                             <div className="card-body">
                                 <h5 className="card-title">Max</h5>
