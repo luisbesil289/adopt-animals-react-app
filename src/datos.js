@@ -1,13 +1,4 @@
-import React from 'react';
-import List from './List';
-import Filtros from './Filtros';
-import './datos.js';
-
-
-class Lists extends React.Component {
- constructor(props){
-  super(props);
-  this.animales = [
+this.animales = [
     {
       id: 1,
       nombre: 'Misha',
@@ -122,25 +113,3 @@ class Lists extends React.Component {
       descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
     }
   ];
- }
-  render() {
-    return (
-      <div>
-        <section className="products">
-          <div className="container">
-            <div className="row">
-              <Filtros />
-              <div className="col col-12 col-sm-8 col-md-8">
-                <div className="row">
-                  {this.animales.map(animal => <List animal={animal} key={animal.id} />)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    );
-  }
-}
-
-export default Lists;
