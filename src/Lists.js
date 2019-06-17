@@ -9,12 +9,14 @@ class Lists extends React.Component {
         {
           id: 1,
           name: 'Car',
-          description: 'This is the awesome red car you always wanted to buy.'
-        },
+          description: 'This is the awesome red car you always wanted to buy.',
+          foto: 'assets/dog_01.jpg'
+        }/* ,
         {
           id: 2,
           name: 'House',
           description: 'Buy this house now and you will get 50% off.'
+          
         },
         {
           id: 3,
@@ -40,7 +42,7 @@ class Lists extends React.Component {
           id: 7,
           name: 'Coke',
           description: 'My coke'
-        }
+        } */
       ];
     }
   
