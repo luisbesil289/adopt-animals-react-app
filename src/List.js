@@ -4,8 +4,10 @@ import AnimalCard from './AnimalCard';
 
 class List extends React.Component {
     render() {
-        return (
-            <AnimalCard animal={this.props.animal} />
+        
+        return (           
+            <AnimalCard animal={this.props.animal} />          
+            
         );        
     }
     

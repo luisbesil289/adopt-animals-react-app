@@ -1,9 +1,31 @@
 import React from 'react';
 import './animalCard.css';
-
+import Animal from './Animal';
 
 
 class AnimalCard extends React.Component { 
+  constructor(props){
+    super(props);
+    this.state = {
+      section: 0
+    };
+  } 
+
+
+  goToAnimal = () => {
+    this.setState({
+      section: 1
+    });
+  }
+
+  currentSection() {
+    if (this.state.section === 1) {
+      return <Animal />;
+    }
+
+  }
+
+
 
   render() {
     return (
@@ -18,6 +40,7 @@ class AnimalCard extends React.Component {
             </div>
           </div>          
         </div>
+        {this.currentSection()}
       </React.Fragment>
     );
   }
