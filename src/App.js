@@ -5,6 +5,7 @@ import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 import Lists from './Lists';
 import Animal from './Animal';
+import Wishlist from './Wishlist';
 import Test from './Test';
 
 
@@ -35,9 +36,15 @@ class App extends React.Component {
     });
   }
 
-  goToTest = () => {
+  goToWishlist = () => {
     this.setState({
       section: 4
+    });
+  }
+
+  goToTest = () => {
+    this.setState({
+      section: 5
     });
   }
 
@@ -55,6 +62,10 @@ class App extends React.Component {
     }
 
     if (this.state.section === 4) {      
+      return <Wishlist />;
+    }
+
+    if (this.state.section === 5) {      
       return <Test />;
     }
 
@@ -78,6 +89,9 @@ class App extends React.Component {
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#Animal" onClick={this.goToAnimal}>Animal</a>
+              </li>
+              <li className="nav-item active">
+                <a className="nav-link" href="#Wishlist" onClick={this.goToWishlist}>Wishlist <span className="sr-only"></span></a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#Test" onClick={this.goToTest}>Test <span className="sr-only"></span></a>

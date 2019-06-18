@@ -1,0 +1,7 @@
+.card .card-body {
+    background-color: rgb(240, 251, 255);
+    background-image: url("assets/Logo-02.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+}

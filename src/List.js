@@ -21,12 +21,10 @@ class List extends React.Component {
           currentSection() {
             if (this.state.section === 1) {
               return <Animal />;
-            }
-               
+            }               
           }
 
-    render() {
-        
+    render() {        
         return (           
             <AnimalCard animal={this.props.animal} />            
       );        

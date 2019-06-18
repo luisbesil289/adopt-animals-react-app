@@ -17,7 +17,7 @@ class AnimalCard extends React.Component {
             <div className="card-body">
               <h5 className="card-title">{this.props.animal.nombre}</h5>
               <p className="card-text">{this.props.animal.descripcion}</p>              
-              <button onClick={this.onClick.bind(this)}>Ver</button>
+              <button className="btn btn-primary" onClick={this.onClick.bind(this)}>Ver</button>
             </div>
           </div>          
         </div>       
