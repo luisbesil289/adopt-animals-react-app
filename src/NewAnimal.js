@@ -1,62 +1,34 @@
 import React from 'react';
 import './NewAnimal.css';
 
+
+
 class NewAnimal extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {            
-          nombre: ''
+        this.state = {
+          name: ''
         };
       }
 
-
-    handleNombreChange = (event) => {
-        this.setState({ nombre: event.target.value });
-    }
-
-    handleTipoChange = (event) => {
-        this.setState({ tipo: event.target.value });
-    }
-
-    handlePriceChange = (event) => {
-        this.setState({ raza: event.target.value });
-      
-    }
-
-    handleSubmit(event) {
-        
+      handleNameChange = (event) => {        
+        this.setState({ name: event.target.value});
+      }    
+    
+      handleSubmit = (event) => {
         event.preventDefault(); // Ignore default browser action.
-        // Send form data.        
-      /*   this.props.addNewAnimal({            
-            name: this.state.nombre           
-        }); */
+        // Send form data.
+        this.props.addNewProduct({
+          name: this.state.name
+        });
         // Reset form.
-        /*   this.setState({
-            name: '',
-            price: 0
-          }); */
-          
-    }
-
+        this.setState({
+          name: ''
+        });
+      }
 
     render() {
-        return (
-            /* 
-            id: 7,
-       nombre: 'Alf',
-       tipo: 'dog',
-       raza: 'Caniche',
-       barrio: 'Cordón',
-       sexo: 'M',
-       fecha: '16/06/2014',
-       ojos: 'Marrones',
-       pelo: 'Marrón',
-       nombreContacto: 'Juan Carlos Rodriguez',
-       telefonoContacto: '094 236 444',
-       emailContacto: 'l.besil@hotmail.com',
-       foto: 'assets/dog_10.jpg',
-       descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-            */
+        return (           
             <div className="container formNuevoAnimal p-3 mb-5 bg-white rounded">
                 <div className="row justify-content-center">
                     <div className="col col-sm-12 borderless">
@@ -64,7 +36,7 @@ class NewAnimal extends React.Component {
                             <div className="form-row">
                                 <div className="form-group col-md-3">
                                     <label htmlFor="inputNombre">Nombre</label>
-                                    <input type="text" className="form-control" onChange={this.handleNombreChange} placeholder="Nombre ..."></input>
+                                    <input type="text" className="form-control" onChange={this.handleNameChange} placeholder="Nombre ..."></input>
 
                                 </div>
                                 <div className="form-group col-md-3">

@@ -124,7 +124,14 @@ class Lists extends React.Component {
   ];
  }
 
-
+ addNewProduct = (newAnimal) => {
+  this.setState({
+    animales: [...this.state.animales, {
+      id: this.getNextProductId(),
+      name: newAnimal.name
+    }]
+  });
+}
 
   render() {
     return (

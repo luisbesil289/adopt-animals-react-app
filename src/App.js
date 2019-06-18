@@ -5,7 +5,7 @@ import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 import Lists from './Lists';
 import Animal from './Animal';
-import AnimalCard from './Animal';
+
 
 
 class App extends React.Component {
