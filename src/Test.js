@@ -6,7 +6,7 @@ class Test extends React.Component {
   render() {
     return (
       <div>
-        <Parent />
+        <Padre />
     </div>
     );
   }
@@ -14,29 +14,22 @@ class Test extends React.Component {
 
 export default Test;
 
- class Parent extends React.Component {
-  onClick() {
-    this.refs.child.getAlert() // undefined
-  }
-
-  render() {   
-   return (
-     <div>
-       <Child ref="child" />
-       <h1 ref="hello">Dios</h1>
-       <button onClick={this.onClick.bind(this)}>Click</button>
-     </div>
-   );
-  }
- }
-
- class Child extends React.Component {
-  getAlert() {
-     alert('clicked');
-  }
+class Padre extends React.Component{
   render() {
-   return (
-     <h1 ref="hello">Hello</h1>
-   );
+    return (
+      <div>
+        <Hija />
+    </div>
+    );
   }
- }
+}
+
+class Hija extends React.Component{
+  render() {
+    return (
+      <div>
+        <h3>test</h3>
+    </div>
+    );
+  }
+}
