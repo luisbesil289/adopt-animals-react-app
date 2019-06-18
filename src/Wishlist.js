@@ -1,4 +1,5 @@
 import React from 'react'
+import './Wishlist.css';
 
 class Wishlist extends React.Component {
     render() {
@@ -6,7 +7,7 @@ class Wishlist extends React.Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col col-12 col-sm-4 col-md-4">
-                        <div className="card card-lista">                            
+                        <div className="card card-wishlist">
                             <div className="card-body">
                                 <img src="assets/dog_10.jpg" className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
                                 <h4 className="card-title">Nombre: Doki</h4>
@@ -19,10 +20,11 @@ class Wishlist extends React.Component {
                                     <li className=".bg-light">094 236 444</li>
                                     <li className=".bg-light">l.besil@observador.com.uy</li>
                                 </ul>
+                                <hr />
                                 <button type="button" className="btn btn-warning">Quitar</button>
                                 <hr />
                                 <button type="button" className="btn btn-success btn-block btn">Adoptar</button>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                 </div>
