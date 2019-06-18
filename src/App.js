@@ -5,6 +5,7 @@ import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 import Lists from './Lists';
 import Animal from './Animal';
+import Test from './Test';
 
 
 
@@ -34,7 +35,7 @@ class App extends React.Component {
     });
   }
 
-  goToAnimal = () => {
+  goToTest = () => {
     this.setState({
       section: 4
     });
@@ -53,8 +54,8 @@ class App extends React.Component {
       return <Animal />;
     }
 
-    if (this.state.section === 4) {
-      return <Animal />;
+    if (this.state.section === 4) {      
+      return <Test />;
     }
 
   }
@@ -79,7 +80,7 @@ class App extends React.Component {
                 <a className="nav-link" href="#Animal" onClick={this.goToAnimal}>Animal</a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="/List">Lista de deseos <span className="sr-only"></span></a>
+                <a className="nav-link" href="#Test" onClick={this.goToTest}>Test <span className="sr-only"></span></a>
               </li>
             </ul>
             <button className="LogIn btn btn-outline-light" type="submit"> LogIn - Register</button>
@@ -87,9 +88,8 @@ class App extends React.Component {
         </nav>
 
         <Logo />
-        <hr />
-        {this.currentSection()}
-       
+        <hr />        
+        {this.currentSection()}       
         <Footer />
       </div>
     )

@@ -124,6 +124,7 @@ class Lists extends React.Component {
   ];
  }
 
+ 
  addNewProduct = (newAnimal) => {
   this.setState({
     animales: [...this.state.animales, {

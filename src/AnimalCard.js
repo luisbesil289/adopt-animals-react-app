@@ -1,32 +1,13 @@
 import React from 'react';
 import './animalCard.css';
-import Animal from './Animal';
-
 
 class AnimalCard extends React.Component { 
-  constructor(props){
-    super(props);
-    this.state = {
-      section: 0
-    };
-  } 
-
-
-  goToAnimal = () => {
-    this.setState({
-      section: 1
-    });
+   
+  onClick() {
+    this.refs.List.goToAnimal() // undefined
   }
 
-  currentSection() {
-    if (this.state.section === 1) {
-      return <Animal />;
-    }
-
-  }
-
-
-
+  
   render() {
     return (
       <React.Fragment>
@@ -35,12 +16,11 @@ class AnimalCard extends React.Component {
             <img src={this.props.animal.foto} className="card-img-top" alt="... "></img>
             <div className="card-body">
               <h5 className="card-title">{this.props.animal.nombre}</h5>
-              <p className="card-text">{this.props.animal.descripcion}</p>
-              <a className="btn btn-primary btn-block" href="#Animal" onClick={this.goToAnimal}>Ver</a>              
+              <p className="card-text">{this.props.animal.descripcion}</p>              
+              <button onClick={this.onClick.bind(this)}>Ver</button>
             </div>
           </div>          
-        </div>
-        {this.currentSection()}
+        </div>       
       </React.Fragment>
     );
   }

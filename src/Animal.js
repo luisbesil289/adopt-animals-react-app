@@ -1,6 +1,13 @@
 import React from 'react';
 
 class Animal extends React.Component {
+
+
+    getAlert() {
+        alert('clicked');
+     }
+
+
     render() {
         return (
             <div className="container">

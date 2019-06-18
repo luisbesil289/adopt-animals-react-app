@@ -9,13 +9,13 @@ class NewAnimal extends React.Component {
         this.state = {
           name: ''
         };
-      }
+    }
 
-      handleNameChange = (event) => {        
+    handleNameChange = (event) => {        
         this.setState({ name: event.target.value});
-      }    
+    }    
     
-      handleSubmit = (event) => {
+    handleSubmit = (event) => {
         event.preventDefault(); // Ignore default browser action.
         // Send form data.
         this.props.addNewProduct({
@@ -25,7 +25,7 @@ class NewAnimal extends React.Component {
         this.setState({
           name: ''
         });
-      }
+    }
 
     render() {
         return (           
