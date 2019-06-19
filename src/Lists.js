@@ -2,7 +2,6 @@ import React from 'react';
 import Filtros from './Filtros';
 import './datos.js';
 import AnimalCard from './AnimalCard';
-import { thisExpression } from '@babel/types';
 
 
 class Lists extends React.Component {
