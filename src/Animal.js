@@ -2,12 +2,6 @@ import React from 'react';
 
 class Animal extends React.Component {
 
-
-    getAlert() {
-        alert('clicked');
-     }
-
-
     render() {
         return (
             <div className="container">
@@ -15,8 +9,8 @@ class Animal extends React.Component {
                     <div className="col col-sm-12 col-md-6">
                         <div className="card cardAnimal card-body">
                             <div className="cardFicha">
-                                <h4 className="card-title font-weight-bold">Doki</h4>
-                                <h4 className="card-title">Bulldog Francés</h4>
+                                <h4 className="card-title font-weight-bold">{this.props.nombre}</h4>
+                                <h4 className="card-title">{this.props.raza}</h4>
                             </div>
                             <hr />
                             <h4 className="card-text">Características</h4>
@@ -36,7 +30,7 @@ class Animal extends React.Component {
                                 consectetur adipisicing elit. Reprehenderit deserunt veniam tempora quibusdam blanditiis sequi sapiente voluptates dolorem fuga, repellendus corrupti dolore. Nostrum quos soluta explicabo, ea vel veniam optio tempore, fuga magnam
                                 odio ullam similique rem est? Cupiditate, eos.
                     </p>
-                            <a href="/Wishlist"><button type="button" className="btn btn-secondary btn-block shadow p-1 rounded">Agregar a la Wishlist</button></a>
+                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.props.goToWishlist}>Agregar a la Wishlist</button>
                             <hr />
 
                             <h4 className="card-text">Datos del Contacto</h4>

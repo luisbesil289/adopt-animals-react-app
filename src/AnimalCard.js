@@ -12,7 +12,7 @@ class AnimalCard extends React.Component {
             <img src={this.props.animal.foto} className="card-img-top" alt="... "></img>
             <div className="card-body">
               <h5 className="card-title">{this.props.animal.nombre}</h5>
-              <p className="card-text">{this.props.animal.descripcion}</p>              
+              <p className="card-text">{this.props.animal.descripcion}</p>                     
               <button className="btn btn-primary" onClick={this.props.goToAnimal}>Ver</button>
             </div>
           </div>          
