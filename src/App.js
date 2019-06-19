@@ -75,14 +75,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-          <a className="navbar-brand" href="/List"><img src="assets/Logo-02.png" alt="Smiley face" height={53} width={70}></img></a>
+          <a className="navbar-brand" href="/Lists"><img src="assets/Logo-02.png" alt="Smiley face" height={53} width={70}></img></a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="menuHorizontal collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#List" onClick={this.goToHome}>Home</a>
+                <a className="nav-link" href="#Lists" onClick={this.goToHome}>Home</a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#NewAnimal" onClick={this.goToNew}>Nuevo Animal</a>

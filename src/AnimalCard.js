@@ -2,11 +2,11 @@ import React from 'react';
 import './animalCard.css';
 
 class AnimalCard extends React.Component { 
-   
+   /* 
   onClick() {
     this.refs.List.goToAnimal() 
   }
-  
+   */
   render() {
     return (
       <React.Fragment>
