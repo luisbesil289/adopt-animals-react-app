@@ -16,6 +16,7 @@ class Lists extends React.Component {
               <div className="col col-12 col-sm-8 col-md-8">
                 <div className="row">
                   {this.props.animales.map(animal => <AnimalCard goToAnimal={this.props.goToAnimal} animal={animal} key={animal.id} />)}
+                  
                 </div>
               </div>
             </div>

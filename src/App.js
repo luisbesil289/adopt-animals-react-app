@@ -182,7 +182,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 4) {
-      return <Wishlist />;
+      return <Wishlist animal={this.animal}/>;
     }
 
     if (this.state.section === 5) {
@@ -191,8 +191,7 @@ class App extends React.Component {
 
   }
 
-  getNextProductId() {
-    
+  getNextProductId() {    
     var productWithHighestId = this.animales.sort((a, b) => b.id - a.id)[0];
     if (productWithHighestId === undefined) {
       return 1; // List is empty, so use 1 as first product id.
@@ -202,19 +201,24 @@ class App extends React.Component {
 
   }
   newAnimal = (newAnimal) => {   
-    this.animales.push({ id: this.getNextProductId(), nombre: newAnimal.name })
-    console.log(this.animales);
+    this.animales.push({ id: this.getNextProductId(),
+       nombre: newAnimal.name,
+        tipo: newAnimal.tipo,
+        raza: newAnimal.raza,
+        barrio: newAnimal.barrio,
+        sexo: newAnimal.sexo,
+        fecha: newAnimal.fecha,
+        ojos: newAnimal.ojos,
+        pelo: newAnimal.pelo,
+        nombreContacto: newAnimal.nombreContacto,    
+        telefonoContacto: newAnimal.telefonoContacto,
+        emailContacto: newAnimal.emailContacto,
+        descripcion: newAnimal.descripcion
+        
+      })    
+      console.log(this.animales);
   }
-  /* newAnimal = (newAnimal) => {   
-    this.animales({
-      animales: [...this.animales, {
-        id: this.getNextProductId(),
-        name: newAnimal.name
-      }]
-      
-    });     
-  } */
-
+  
   render() {
     return (
       <div className="App">
