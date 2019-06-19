@@ -45,7 +45,7 @@ class App extends React.Component {
         emailContacto: 'l.besil@hotmail.com',
         foto: 'assets/dog_11.jpg',
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-  
+
       },
       {
         id: 3,
@@ -132,9 +132,9 @@ class App extends React.Component {
     this.state = {
       section: 1
     };
-    
+
   }
-  
+
 
   goToHome = () => {
     this.setState({
@@ -148,8 +148,8 @@ class App extends React.Component {
     });
   }
 
-  goToAnimal = (animal) => {       
-    this.setState({     
+  goToAnimal = (animal) => {
+    this.setState({
       section: 3
     });
   }
@@ -170,26 +170,50 @@ class App extends React.Component {
     /* alert(this.state.section); */
 
     if (this.state.section === 1) {
-      return <Lists goToAnimal={this.goToAnimal} animales={this.animales}/>;
+      return <Lists goToAnimal={this.goToAnimal} animales={this.animales} />;
     }
 
     if (this.state.section === 2) {
-      return <NewAnimal />;
+      return <NewAnimal newAnimal={this.newAnimal} />;
     }
 
     if (this.state.section === 3) {
-      return <Animal goToWishlist={this.goToWishlist} animal={this.animal}/>;
+      return <Animal goToWishlist={this.goToWishlist} animal={this.animal} />;
     }
 
-    if (this.state.section === 4) {      
+    if (this.state.section === 4) {
       return <Wishlist />;
     }
 
-    if (this.state.section === 5) {      
+    if (this.state.section === 5) {
       return <Test />;
     }
 
   }
+
+  getNextProductId() {
+    
+    var productWithHighestId = this.animales.sort((a, b) => b.id - a.id)[0];
+    if (productWithHighestId === undefined) {
+      return 1; // List is empty, so use 1 as first product id.
+    } else {     
+      return productWithHighestId.id + 1; // List is not empty, increase one to the highest id for the next product.
+    }
+
+  }
+  newAnimal = (newAnimal) => {   
+    this.animales.push({ id: this.getNextProductId(), nombre: newAnimal.name })
+    console.log(this.animales);
+  }
+  /* newAnimal = (newAnimal) => {   
+    this.animales({
+      animales: [...this.animales, {
+        id: this.getNextProductId(),
+        name: newAnimal.name
+      }]
+      
+    });     
+  } */
 
   render() {
     return (
@@ -208,10 +232,10 @@ class App extends React.Component {
                 <a className="nav-link" href="#NewAnimal" onClick={this.goToNew}>Nuevo Animal</a>
               </li>
               <li className="nav-item active">
-               {/* <a className="nav-link" href="#Animal" onClick={this.goToAnimal}>Animal</a> */}
+                {/* <a className="nav-link" href="#Animal" onClick={this.goToAnimal}>Animal</a> */}
               </li>
               <li className="nav-item active">
-              <a className="nav-link" href="#Wishlist" onClick={this.goToWishlist}>Wishlist <span className="sr-only"></span></a>
+                <a className="nav-link" href="#Wishlist" onClick={this.goToWishlist}>Wishlist <span className="sr-only"></span></a>
               </li>
               <li className="nav-item active">
                 {/* <a className="nav-link" href="#Test" onClick={this.goToTest}>Test <span className="sr-only"></span></a> */}
@@ -222,8 +246,8 @@ class App extends React.Component {
         </nav>
 
         <Logo />
-        <hr />        
-        {this.currentSection()}       
+        <hr />
+        {this.currentSection()}
         <Footer />
       </div>
     )

@@ -11,21 +11,25 @@ class NewAnimal extends React.Component {
         };
     }
 
-    handleNameChange = (event) => {        
-        this.setState({ name: event.target.value});
-    }    
+    handleNameChange = (event) => {
+        this.setState({ name: event.target.value });
+      }
     
-    handleSubmit = (event) => {
+      handlePriceChange = (event) => {
+        this.setState({ price: event.target.value });
+      }
+    
+      handleSubmit = (event) => {          
         event.preventDefault(); // Ignore default browser action.
         // Send form data.
-        this.props.addNewProduct({
+        this.props.newAnimal({
           name: this.state.name
         });
         // Reset form.
         this.setState({
           name: ''
         });
-    }
+      }
 
     render() {
         return (           
@@ -37,7 +41,7 @@ class NewAnimal extends React.Component {
                                 <div className="form-group col-md-3">
                                     <label htmlFor="inputNombre">Nombre</label>
                                     <input type="text" className="form-control" onChange={this.handleNameChange} placeholder="Nombre ..."></input>
-
+                                   
                                 </div>
                                 <div className="form-group col-md-3">
                                     <label htmlFor="inputTipo">Tipo</label>
