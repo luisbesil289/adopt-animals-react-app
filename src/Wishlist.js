@@ -12,7 +12,7 @@ class Wishlist extends React.Component {
                                 <img src="assets/dog_10.jpg" className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
                                 <h4 className="card-title">Nombre: Doki</h4>
                                 <p className="card-text">Birthday: 21/04/2019</p>
-                                <h4 className="card-title"><a>Tipo: Bulldog Francés</a></h4>
+                                <h4 className="card-title">Tipo: Bulldog Francés</h4>
                                 <hr />
                                 <p className="lead">Datos del Contacto</p>
                                 <ul className=".bg-light">

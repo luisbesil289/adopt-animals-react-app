@@ -4,9 +4,8 @@ import './animalCard.css';
 class AnimalCard extends React.Component { 
    
   onClick() {
-    this.refs.List.goToAnimal() // undefined
+    this.refs.List.goToAnimal() 
   }
-
   
   render() {
     return (
@@ -17,7 +16,7 @@ class AnimalCard extends React.Component {
             <div className="card-body">
               <h5 className="card-title">{this.props.animal.nombre}</h5>
               <p className="card-text">{this.props.animal.descripcion}</p>              
-              <button className="btn btn-primary" onClick={this.onClick.bind(this)}>Ver</button>
+              <button className="btn btn-primary" onClick={this.props.goToAnimal}>Ver</button>
             </div>
           </div>          
         </div>       

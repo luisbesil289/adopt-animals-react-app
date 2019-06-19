@@ -50,7 +50,7 @@ class App extends React.Component {
 
   currentSection() {
     if (this.state.section === 1) {
-      return <Lists />;
+      return <Lists goToAnimal={this.goToAnimal} />;
     }
 
     if (this.state.section === 2) {

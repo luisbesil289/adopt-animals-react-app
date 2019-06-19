@@ -2,6 +2,7 @@ import React from 'react';
 import List from './List';
 import Filtros from './Filtros';
 import './datos.js';
+import AnimalCard from './AnimalCard';
 
 
 class Lists extends React.Component {
@@ -143,7 +144,7 @@ class Lists extends React.Component {
               <Filtros />
               <div className="col col-12 col-sm-8 col-md-8">
                 <div className="row">
-                  {this.animales.map(animal => <List animal={animal} key={animal.id} />)}
+                  {this.animales.map(animal => <AnimalCard goToAnimal={this.props.goToAnimal} animal={animal} key={animal.id} />)}
                 </div>
               </div>
             </div>
