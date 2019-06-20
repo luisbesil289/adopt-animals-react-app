@@ -6,6 +6,7 @@ class Animal extends React.Component {
         this.state = {
             unAnimal: this.props.unAnimal
         };       
+        
     }
 
      handleSubmit = (event) => {      

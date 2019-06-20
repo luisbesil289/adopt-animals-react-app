@@ -3,11 +3,16 @@ import './Wishlist.css';
 
 
 class Wishlist extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            unAnimal: this.props.animal
+        };
+    }
     render() {
         return (
-            <div class="col col-6">
-                <div class="card cardLista">
+            <div className="col col-6">
+                <div className="card cardLista">
                     <div className="card-body">
                         <img src="assets/dog_10.jpg" className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
                         <h4 className="card-title">{this.props.animal.nombre}</h4>
@@ -21,7 +26,7 @@ class Wishlist extends React.Component {
                             <li className="card-text">{this.props.animal.emailContacto}</li>
                         </ul>
                         <hr />
-                        <button type="button" className="btn btn-warning">Quitar</button>
+                        <button type="button" onClick={(e) => this.props.removeToWishlist(this.state.unAnimal, e)} className="btn btn-warning">Quitar</button>
                         <hr />
                         <button type="button" className="btn btn-success btn-block btn">Adoptar</button>
                     </div>

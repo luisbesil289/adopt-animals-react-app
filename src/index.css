@@ -1,5 +1,5 @@
 body {
-
+  background-image: "assets/Logo-02.png";
   background-image: no-repeat;
   font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   text-rendering: optimizeLegibility;
@@ -8,6 +8,7 @@ body {
 
 @media all and (max-width: 520px) {
   body {
+    background-image: "assets/Logo-02.png";
       background-color: white;
       font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
       text-rendering: optimizeLegibility;
@@ -26,7 +27,7 @@ body {
 
 @media all and (max-width: 699px) and (min-width: 520px) {
   body {
-      
+    background-image: "assets/Logo-02.png";
       font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
@@ -38,7 +39,7 @@ body {
 
 @media all and (min-width: 670px) {
   body {
-      
+    background-image: "assets/Logo-02.png";
       font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;

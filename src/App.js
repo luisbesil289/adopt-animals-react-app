@@ -125,6 +125,7 @@ class App extends React.Component {
         foto: 'assets/dog_10.jpg',
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       }
+
     ];
 
     this.wishlist=[];
@@ -183,7 +184,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 4) {
-     return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} />;
+     return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist}/>;
     }
 
     if (this.state.section === 5) {
@@ -220,10 +221,17 @@ class App extends React.Component {
       console.log(this.animales);
   }
 
+
   addToWishlist = (animal) => {    
-    this.wishlist.push(animal)
-    console.log(this.wishlist);
+    this.wishlist.push(animal)    
   }
+  
+
+  removeToWishlist = ( animal ) => {
+    var i = this.wishlist.indexOf(animal);    
+    this.wishlist.splice(i, 1); 
+    this.goToWishlist();
+}
   
   render() {
     return (
