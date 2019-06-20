@@ -10,7 +10,7 @@ class Lists extends React.Component {
     return (
 
 
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <Filtros />
           <div className="col col-12 col-sm-8 col-md-8">
@@ -19,18 +19,14 @@ class Lists extends React.Component {
             </div>
           </div>
           <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 col-lg-2">
-       <hr />
-       <a href="https://freshpet.com/"><img src="assets/publicidad_01.jpg" className="card-img-top" alt="... "></img></a>
-       <hr />
-       <a href="https://freshpet.com/"><img src="assets/publicidad_02.jpg" className="card-img-top" alt="... "></img></a>
-       <hr />
-   </aside>
+            <hr />
+            <a href="https://freshpet.com/"><img src="assets/publicidad_01.jpg" className="card-img-top" alt="... "></img></a>
+            <hr />
+            <a href="https://freshpet.com/"><img src="assets/publicidad_02.jpg" className="card-img-top" alt="... "></img></a>
+            <hr />
+          </aside>
         </div>
-        
       </div>
-      
-
-
     );
   }
 }

@@ -11,10 +11,10 @@ class Wishlist extends React.Component {
     }
     render() {
         return (
-            <div className="col col-6">
+            <div className="col col-4">
                 <div className="card cardLista">
                     <div className="card-body">
-                        <img src="assets/dog_10.jpg" className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
+                        <img src={this.props.animal.foto} className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
                         <h4 className="card-title">{this.props.animal.nombre}</h4>
                         <p className="card-text">{this.props.animal.fecha}</p>
                         <h4 className="card-title">{this.props.animal.raza}</h4>
