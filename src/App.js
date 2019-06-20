@@ -4,11 +4,9 @@ import Logo from './Logo.js';
 import NewAnimal from './NewAnimal.js';
 import Footer from './Footer.js';
 import Lists from './Lists';
+import ListsWishlist from './ListsWishlist';
 import Animal from './Animal';
-import Wishlist from './Wishlist';
 import Test from './Test';
-
-
 
 class App extends React.Component {
   constructor(props) {
@@ -129,6 +127,24 @@ class App extends React.Component {
       }
     ];
 
+    this.wishlist=[
+      {id: 1,
+      nombre: 'Misha',
+      tipo: 'Roberto',
+      raza: 'Caniche',
+      barrio: 'Cordón',
+      sexo: 'M',
+      fecha: '16/06/2014',
+      ojos: 'Marrones',
+      pelo: 'Marrón',
+      nombreContacto: 'Juan Carlos Rodriguez',
+      telefonoContacto: '094 236 444',
+      emailContacto: 'l.besil@hotmail.com',
+      foto: 'assets/cat_03.jpg',
+      descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+    }
+  ];
+
     this.state = {
       section: 1
     };
@@ -178,11 +194,11 @@ class App extends React.Component {
     }
 
     if (this.state.section === 3) {
-      return <Animal goToWishlist={this.goToWishlist} animal={this.animal} />;
+      return <Animal addToWishlist={this.addToWishlist} animal={this.animal} />;
     }
 
     if (this.state.section === 4) {
-      return <Wishlist animal={this.animal}/>;
+     return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} />;
     }
 
     if (this.state.section === 5) {
@@ -191,7 +207,7 @@ class App extends React.Component {
 
   }
 
-  getNextProductId() {    
+  getNextAnimalId() {    
     var productWithHighestId = this.animales.sort((a, b) => b.id - a.id)[0];
     if (productWithHighestId === undefined) {
       return 1; // List is empty, so use 1 as first product id.
@@ -201,7 +217,7 @@ class App extends React.Component {
 
   }
   newAnimal = (newAnimal) => {   
-    this.animales.push({ id: this.getNextProductId(),
+    this.animales.push({ id: this.getNextAnimalId(),
        nombre: newAnimal.name,
         tipo: newAnimal.tipo,
         raza: newAnimal.raza,
@@ -217,6 +233,11 @@ class App extends React.Component {
         
       })    
       console.log(this.animales);
+  }
+
+  addToWishlist(animal){
+    console.log(animal);
+    this.wishlist.push({ nombre: animal.name})
   }
   
   render() {

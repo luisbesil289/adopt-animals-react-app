@@ -1,7 +1,32 @@
 import React from 'react';
 
 class Animal extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: ''
+        };
+    }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.props.animal);
+        this.props.addToWishlist({
+            name: this.state.name,
+            tipo: this.state.tipo,
+            raza: this.state.raza,
+            barrio: this.state.barrio,
+            sexo: this.state.sexo,
+            fecha: this.state.fecha,
+            ojos: this.state.ojos,
+            pelo: this.state.pelo,
+            nombreContacto: this.state.nombreContacto,    
+            telefonoContacto: this.state.telefonoContacto,
+            emailContacto: this.state.emailContacto,
+            descripcion: this.state.descripcion
+
+        });
+    };
     render() {
         return (
             <div className="container">
@@ -16,21 +41,18 @@ class Animal extends React.Component {
                             <h4 className="card-text">Características</h4>
                             <ul className="card-text">
                                 <li>
-                                    <p>Nació el: 21/04/2019</p>
+                                    <p>Nació el: {this.props.fecha}</p>
                                 </li>
                                 <li>
-                                    <p>Color de pelo: Negro</p>
+                                    <p>Color de pelo: {this.props.pelo}</p>
                                 </li>
                                 <li>
-                                    <p>Color de ojos: Marrón</p>
+                                    <p>Color de ojos: {this.props.ojos}</p>
                                 </li>
                             </ul>
                             <hr />
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. Lorem ipsum dolor, sit amet
-                                consectetur adipisicing elit. Reprehenderit deserunt veniam tempora quibusdam blanditiis sequi sapiente voluptates dolorem fuga, repellendus corrupti dolore. Nostrum quos soluta explicabo, ea vel veniam optio tempore, fuga magnam
-                                odio ullam similique rem est? Cupiditate, eos.
-                    </p>
-                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.props.goToWishlist}>Agregar a la Wishlist</button>
+                            <p>{this.props.descripcion}</p>
+                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit}>Agregar a la Wishlist</button>
                             <hr />
 
                             <h4 className="card-text">Datos del Contacto</h4>

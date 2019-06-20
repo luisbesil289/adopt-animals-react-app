@@ -3,34 +3,27 @@ import './Wishlist.css';
 
 
 class Wishlist extends React.Component {
+
     render() {
         return (
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col col-12 col-sm-4 col-md-4">
-                        <div className="card card-wishlist">
-                            <div className="card-body">
-                                <img src="assets/dog_10.jpg" className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
-                                <h4 className="card-title">{this.props.animal.nombre}</h4>
-                                <p className="card-text">Birthday: 21/04/2019</p>
-                                <h4 className="card-title">Tipo: Bulldog Francés</h4>
-                                <hr />
-                                <p className="lead">Datos del Contacto</p>
-                                <ul className=".bg-light">
-                                    <li className=".bg-light">Luis Besil</li>
-                                    <li className=".bg-light">094 236 444</li>
-                                    <li className=".bg-light">l.besil@observador.com.uy</li>
-                                </ul>
-                                <hr />
-                                <button type="button" className="btn btn-warning">Quitar</button>
-                                <hr />
-                                <button type="button" className="btn btn-success btn-block btn">Adoptar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div className="card-body">
+                <img src="assets/dog_10.jpg" className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
+                <h4 className="card-title">{this.props.animal.nombre}</h4>
+                <p className="card-text">{this.props.animal.fecha}</p>
+                <h4 className="card-title">{this.props.animal.raza}</h4>
+                <hr />
+                <p className="lead">Datos del Contacto</p>
+                <ul className=".bg-light">
+                    <li className=".bg-light">{this.props.animal.nombreContacto}</li>
+                    <li className=".bg-light">{this.props.animal.telefonoContacto}</li>
+                    <li className=".bg-light">{this.props.animal.emailContacto}</li>
+                </ul>
+                <hr />
+                <button type="button" className="btn btn-warning">Quitar</button>
+                <hr />
+                <button type="button" className="btn btn-success btn-block btn">Adoptar</button>
 
+            </div>
         );
     }
 }
