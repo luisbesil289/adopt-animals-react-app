@@ -95,7 +95,7 @@ class App extends React.Component {
       },
       {
         id: 6,
-        nombre: 'Alf',
+        nombre: 'Rogelio',
         tipo: 'dog',
         raza: 'Caniche',
         barrio: 'Cordón',
@@ -127,23 +127,7 @@ class App extends React.Component {
       }
     ];
 
-    this.wishlist=[
-      {id: 1,
-      nombre: 'Misha',
-      tipo: 'Roberto',
-      raza: 'Caniche',
-      barrio: 'Cordón',
-      sexo: 'M',
-      fecha: '16/06/2014',
-      ojos: 'Marrones',
-      pelo: 'Marrón',
-      nombreContacto: 'Juan Carlos Rodriguez',
-      telefonoContacto: '094 236 444',
-      emailContacto: 'l.besil@hotmail.com',
-      foto: 'assets/cat_03.jpg',
-      descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-    }
-  ];
+    this.wishlist=[];
 
     this.state = {
       section: 1
@@ -164,10 +148,10 @@ class App extends React.Component {
     });
   }
 
-  goToAnimal = () => {
-  
+  goToAnimal = (unAnimal) => {          
     this.setState({
-      section: 3
+      section: 3,
+      unAnimal : unAnimal
     });
   }
 
@@ -194,8 +178,8 @@ class App extends React.Component {
       return <NewAnimal newAnimal={this.newAnimal} />;
     }
 
-    if (this.state.section === 3) {
-      return <Animal addToWishlist={this.addToWishlist} animal={this.animal} />;
+    if (this.state.section === 3) {            
+      return <Animal addToWishlist={this.addToWishlist} unAnimal={this.state.unAnimal} />;
     }
 
     if (this.state.section === 4) {
@@ -236,9 +220,9 @@ class App extends React.Component {
       console.log(this.animales);
   }
 
-  addToWishlist = (animal) => {
-    console.log(animal);
+  addToWishlist = (animal) => {    
     this.wishlist.push(animal)
+    console.log(this.wishlist);
   }
   
   render() {

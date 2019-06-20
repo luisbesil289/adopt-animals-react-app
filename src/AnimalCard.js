@@ -4,10 +4,11 @@ import './animalCard.css';
 class AnimalCard extends React.Component { 
   constructor(props){
     super(props)
-   /*  console.log(this.props.animal) */
-    this.state = {
-      name: ''
+  
+   this.state = {
+    animal: this.props.animal
   };
+  /* console.log(this.state) */
   }
   
   
@@ -20,7 +21,8 @@ class AnimalCard extends React.Component {
             <div className="card-body">
               <h5 className="card-title">{this.props.animal.nombre}</h5>
               <p className="card-text">{this.props.animal.descripcion}</p>                     
-              <button className="btn btn-primary" onClick={this.props.goToAnimal}>Ver</button>
+              {/* <button className="btn btn-primary" onClick={this.props.goToAnimal(this.animal)}>{this.animal}>Ver </button> */}
+              <button className="btn btn-primary" onClick={(e) => this.props.goToAnimal(this.state.animal, e)}>Ver</button>
             </div>
           </div>          
         </div>       

@@ -4,82 +4,55 @@ class Animal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: ''
-        };
+            unAnimal: this.props.unAnimal
+        };       
     }
-/* name: this.state.name,
-            tipo: this.state.tipo,
-            raza: this.state.raza,
-            barrio: this.state.barrio,
-            sexo: this.state.sexo,
-            fecha: this.state.fecha,
-            ojos: this.state.ojos,
-            pelo: this.state.pelo,
-            nombreContacto: this.state.nombreContacto,    
-            telefonoContacto: this.state.telefonoContacto,
-            emailContacto: this.state.emailContacto,
-            descripcion: this.state.descripcion */
 
-    handleSubmit = (event) => {
-        var animal = [];
-        event.preventDefault();
-        console.log(this.props.animal);
-        animal = [{name: "Yoyii"/* this.state.nombre */,
-            tipo: this.state.tipo,
-            raza: this.state.raza,
-            barrio: this.state.barrio,
-            sexo: this.state.sexo,
-            fecha: this.state.fecha,
-            ojos: this.state.ojos,
-            pelo: this.state.pelo,
-            nombreContacto: this.state.nombreContacto,    
-            telefonoContacto: this.state.telefonoContacto,
-            emailContacto: this.state.emailContacto,
-            descripcion: this.state.descripcion}];
-
-        this.props.addToWishlist(animal);
-    };
+     handleSubmit = (event) => {      
+        event.preventDefault();       
+        this.props.addToWishlist(this.state.unAnimal);
+    }; 
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col col-sm-12 col-md-6">
                         <div className="card cardAnimal card-body">
-                            <div className="cardFicha">
-                                <h4 className="card-title font-weight-bold">{this.props.nombre}</h4>
-                                <h4 className="card-title">{this.props.raza}</h4>
+                            <div className="cardFicha">                                
+                                <h4 className="card-title font-weight-bold">{this.state.unAnimal.nombre}</h4>
+                                <h4 className="card-title">{this.state.unAnimal.raza}</h4>
                             </div>
                             <hr />
                             <h4 className="card-text">Características</h4>
                             <ul className="card-text">
                                 <li>
-                                    <p>Nació el: {this.props.fecha}</p>
+                                    <p>Nació el: {this.state.unAnimal.fecha}</p>
                                 </li>
                                 <li>
-                                    <p>Color de pelo: {this.props.pelo}</p>
+                                    <p>Color de pelo: {this.state.unAnimal.pelo}</p>
                                 </li>
                                 <li>
-                                    <p>Color de ojos: {this.props.ojos}</p>
+                                    <p>Color de ojos: {this.state.unAnimal.ojos}</p>
                                 </li>
                             </ul>
                             <hr />
-                            <p>{this.props.descripcion}</p>
+                            <p>{this.state.unAnimal.descripcion}</p>
                             <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit}>Agregar a la Wishlist</button>
                             <hr />
 
                             <h4 className="card-text">Datos del Contacto</h4>
                             <ul className="card-text">
                                 <li>
-                                    <p>Nombre: Luis Besil</p>
+                                    <p>Nombre: {this.state.unAnimal.nombreContacto}</p>
                                 </li>
                                 <li>
-                                    <p>Telefono / Celular: 094 236 444</p>
+                                    <p>Telefono / Celular: {this.state.unAnimal.telefonoContacto}</p>
                                 </li>
                                 <li>
-                                    <p>Email: l.besil@gmail.com</p>
+                                    <p>Email: {this.state.unAnimal.emailContacto}</p>
                                 </li>
                                 <li>
-                                    <p>Barrio: Parque Batlle</p>
+                                    <p>Barrio: {this.state.unAnimal.barrio}</p>
                                 </li>
                             </ul>
                             <button type="button" className="btn btn-info btn-block shadow p-2 rounded">Contactar</button>
