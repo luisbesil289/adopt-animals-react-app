@@ -87,11 +87,6 @@ p {
   color: rgb(0, 50, 78);
 }
 
-.cardLista {
-  margin-bottom: 1.5em;
-  box-shadow: 0 14px 20px 4px rgba(0, 0, 0, 0.85);
-}
-
 .cardAnimal {
   margin-bottom: 140px;
   width: 100%;
