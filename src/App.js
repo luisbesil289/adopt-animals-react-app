@@ -164,7 +164,8 @@ class App extends React.Component {
     });
   }
 
-  goToAnimal = (animal) => {
+  goToAnimal = () => {
+  
     this.setState({
       section: 3
     });
@@ -235,9 +236,9 @@ class App extends React.Component {
       console.log(this.animales);
   }
 
-  addToWishlist(animal){
+  addToWishlist = (animal) => {
     console.log(animal);
-    this.wishlist.push({ nombre: animal.name})
+    this.wishlist.push(animal)
   }
   
   render() {

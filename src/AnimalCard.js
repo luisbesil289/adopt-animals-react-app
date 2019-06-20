@@ -2,6 +2,13 @@ import React from 'react';
 import './animalCard.css';
 
 class AnimalCard extends React.Component { 
+  constructor(props){
+    super(props)
+   /*  console.log(this.props.animal) */
+    this.state = {
+      name: ''
+  };
+  }
   
   
   render() {

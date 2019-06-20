@@ -7,12 +7,7 @@ class Animal extends React.Component {
             name: ''
         };
     }
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(this.props.animal);
-        this.props.addToWishlist({
-            name: this.state.name,
+/* name: this.state.name,
             tipo: this.state.tipo,
             raza: this.state.raza,
             barrio: this.state.barrio,
@@ -23,9 +18,26 @@ class Animal extends React.Component {
             nombreContacto: this.state.nombreContacto,    
             telefonoContacto: this.state.telefonoContacto,
             emailContacto: this.state.emailContacto,
-            descripcion: this.state.descripcion
+            descripcion: this.state.descripcion */
 
-        });
+    handleSubmit = (event) => {
+        var animal = [];
+        event.preventDefault();
+        console.log(this.props.animal);
+        animal = [{name: "Yoyii"/* this.state.nombre */,
+            tipo: this.state.tipo,
+            raza: this.state.raza,
+            barrio: this.state.barrio,
+            sexo: this.state.sexo,
+            fecha: this.state.fecha,
+            ojos: this.state.ojos,
+            pelo: this.state.pelo,
+            nombreContacto: this.state.nombreContacto,    
+            telefonoContacto: this.state.telefonoContacto,
+            emailContacto: this.state.emailContacto,
+            descripcion: this.state.descripcion}];
+
+        this.props.addToWishlist(animal);
     };
     render() {
         return (
