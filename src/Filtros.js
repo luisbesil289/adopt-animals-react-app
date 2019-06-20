@@ -2,6 +2,19 @@ import React from 'react';
 import './filtros.css';
 
 class Filtros extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: ''
+        };
+    }
+
+
+    handleNameChange = (event) => {
+        this.setState({ name: event.target.value });
+    }
+
+
     render() {
         return (
             <div className="serchVerticalL col col-2 d-none d-md-block">
@@ -23,7 +36,8 @@ class Filtros extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="nombre">Nombre</label>
-                        <input type="nombre" className="form-control" id="nombre"></input>
+                        <input type="text" className="form-control" onChange={this.handleNameChange} value={this.state.value} placeholder="Nombre ..."></input>
+                        <span>{this.state.value}s</span>
                     </div>
 
                     <div className="form-group">
