@@ -63,7 +63,7 @@ class App extends React.Component {
       },
       {
         id: 4,
-        nombre: 'Alf',
+        nombre: 'Carlos',
         tipo: 'dog',
         raza: 'Caniche',
         barrio: 'Cordón',
@@ -79,7 +79,7 @@ class App extends React.Component {
       },
       {
         id: 5,
-        nombre: 'Alf',
+        nombre: 'Tupac',
         tipo: 'dog',
         raza: 'Caniche',
         barrio: 'Cordón',
@@ -95,7 +95,7 @@ class App extends React.Component {
       },
       {
         id: 6,
-        nombre: 'Rogelio',
+        nombre: 'Eminem',
         tipo: 'dog',
         raza: 'Caniche',
         barrio: 'Cordón',
@@ -111,7 +111,7 @@ class App extends React.Component {
       },
       {
         id: 7,
-        nombre: 'Alf',
+        nombre: 'Rita',
         tipo: 'dog',
         raza: 'Caniche',
         barrio: 'Cordón',
@@ -133,7 +133,6 @@ class App extends React.Component {
     this.state = {
       section: 1
     };
-
   }
 
 

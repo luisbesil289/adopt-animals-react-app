@@ -239,15 +239,15 @@ class NewAnimal extends React.Component {
                             <div className="form-row">
                                 <div className="form-group col-md-4">
                                     <label htmlFor="inputnameContact">Nombre de contacto</label>
-                                    <input type="text" onChange={this.handleNombreContactoChange} value={this.state.nombreContacto} className="form-control" placeholder="Nombre ..."></input>
+                                    <input type="text" value={this.state.value} onChange={this.handleNombreContactoChange} className="form-control"></input>
                                 </div>
                                 <div className="form-group col-md-4">
                                     <label htmlFor="inputPhoneContact">Teléfono de contacto</label>
-                                    <input type="text" onChange={this.handleTelefonoContactoChange} value={this.state.telefonoContacto} className="form-control" placeholder="Teléfono ..."></input>
+                                    <input type="text" value={this.state.value} onChange={this.handleTelefonoContactoChange} className="form-control" placeholder="Teléfono ..."></input>
                                 </div>
                                 <div className="form-group col-md-4">
                                     <label htmlFor="inputEmail">Email de contacto</label>
-                                    <input type="email" onChange={this.handleEmailContactoChange} value={this.state.emailContacto} className="form-control" placeholder="Email ..."></input>
+                                    <input type="email" value={this.state.value} onChange={this.handleEmailContactoChange} className="form-control" placeholder="Email ..."></input>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -257,9 +257,8 @@ class NewAnimal extends React.Component {
                                     
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-primary">Registar</button>
+                            <button type="submit" className="btn btn-primary">Guardar</button>
                         </form>
-
                     </div>
                 </div>
             </div>
