@@ -5,23 +5,31 @@ class Filtros extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: ''
+            pName: '',
+            pBarrio: ''
         };
     }
 
 
-    handleNameChange = (event) => {
-        this.setState({ name: event.target.value });
+    changeNameFilter = (event) => {
+        this.setState({ pName: event.target.value });
+    }
+    changeBarrioFilter = (event) => {
+        this.setState({ pBarrio: event.target.value });
     }
 
 
     render() {
+        var filteredList = this.props.animales
+            .filter(item => this.state.pName === null || item.nombre === this.state.pName)
+            .filter(item => this.state.pBarrio === null || item.barrio === this.state.pBarrio)
+            .sort()
+        this.props.retornarAnimalesFiltrados(filteredList);
+
         return (
             <div className="serchVerticalL col col-2 d-none d-md-block">
                 <form className="form" action="">
-
                     <h4>Filtros</h4>
-
                     <hr />
                     <div className="form-group">
                         <label htmlFor="tipo">
@@ -31,18 +39,15 @@ class Filtros extends React.Component {
                             <option value="1">dog</option>
                             <option value="2">cat</option>
                             <option defaultValue="3">todos</option>
-
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="nombre">Nombre</label>
-                        <input type="text" className="form-control" onChange={this.props.changeNameFilter} value={this.state.value} placeholder="Nombre ..."></input>
-                        <span>{this.state.value}s</span>
+                        <input type="text" className="form-control" onChange={this.changeNameFilter} value={this.state.pName} id="nombre"></input>
                     </div>
-
                     <div className="form-group">
                         <label htmlFor="barrio">Barrio</label>
-                        <input type="barrio" className="form-control" id="barrio"></input>
+                        <input type="text" className="form-control" onChange={this.changeBarrioFilter} value={this.state.pBarrio} id="barrio"></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="raza">Raza</label>

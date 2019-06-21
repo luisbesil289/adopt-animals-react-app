@@ -43,7 +43,6 @@ class App extends React.Component {
         emailContacto: 'l.besil@hotmail.com',
         foto: 'assets/dog_11.jpg',
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-
       },
       {
         id: 3,
@@ -63,7 +62,7 @@ class App extends React.Component {
       },
       {
         id: 4,
-        nombre: 'Carlos',
+        nombre: '',
         tipo: 'dog',
         raza: 'Caniche',
         barrio: 'Cordón',
