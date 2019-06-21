@@ -63,8 +63,7 @@ class NewAnimal extends React.Component {
             nombreContacto: this.state.nombreContacto,    
             telefonoContacto: this.state.telefonoContacto,
             emailContacto: this.state.emailContacto,
-            descripcion: this.state.descripcion
-
+            descripcion: this.state.descripcion            
         });
         // Reset form.
         this.setState({
@@ -223,8 +222,8 @@ class NewAnimal extends React.Component {
                                 </div>
                                 <div className="form-group col-md-3">
                                     <label htmlFor="inputPelo col-md-4">Color de pelo</label>
-                                    <select onChange={this.handleColorChange} value={this.state.color} className="custom-select custom-select-md mb-3">
-                                        <option defaultValue="3">Color ...</option>
+                                    <select onChange={this.handlePeloChange} className="custom-select custom-select-md mb-3">
+                                        <option defaultValue={this.state.pelo}>Color ...</option>
                                         <option value="1">Blanco</option>
                                         <option value="2">Crema</option>
                                         <option value="3">Beige</option>
