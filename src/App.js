@@ -137,7 +137,7 @@ class App extends React.Component {
 
 
   goToHome = () => {
-    this.setState({
+   this.setState({
       section: 1
     });
   }

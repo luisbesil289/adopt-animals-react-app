@@ -5,21 +5,33 @@ class Animal extends React.Component {
         super(props);
         this.state = {
             unAnimal: this.props.unAnimal
-        };       
-        
+        };
+
     }
 
-     handleSubmit = (event) => {      
-        event.preventDefault();       
+    handleSubmit = (event) => {
+        event.preventDefault();
         this.props.addToWishlist(this.state.unAnimal);
-    }; 
+        /* this.componentDidMount(); */
+
+
+    };
+
+/*     componentDidMount() {
+        window.setTimeout(function () {
+            this.setState({
+                isButtonDisabled: false,
+            })
+        }, 5000)
+    } */
+
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col col-sm-12 col-md-6">
                         <div className="card cardAnimal card-body">
-                            <div className="cardFicha">                                
+                            <div className="cardFicha">
                                 <h4 className="card-title font-weight-bold">{this.state.unAnimal.nombre}</h4>
                                 <h4 className="card-title">{this.state.unAnimal.raza}</h4>
                             </div>
@@ -67,16 +79,16 @@ class Animal extends React.Component {
                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img src="assets/carr_01.jpg" className="d-block w-100" alt="..."></img>
+                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="assets/carr_02.jpg" className="d-block w-100" alt="..."></img>
+                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="assets/carr_03.jpg" className="d-block w-100" alt="..."></img>
+                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="assets/carr_04.jpg" className="d-block w-100" alt="..."></img>
+                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
                                 </div>
                             </div>
                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
