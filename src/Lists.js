@@ -5,12 +5,20 @@ import AnimalCard from './AnimalCard';
 
 
 class Lists extends React.Component {
+  
 
   render() {
+     /*var filteredList = this.props.animales
+      .filter(animal => animal.nombre === null || animal.nombre === this.props.filters.nombre)
+      .filter(animal => animal.raza === this.props.filters.raza)
+      .filter(animal => animal.raza === this.props.filters.raza)
+      .filter(animal => animal.raza === this.props.filters.raza)
+
+      .sort() filteredList*/
     return (
       <div className="container-fluid">
         <div className="row">
-          <Filtros />
+          <Filtros pNombre={this.pNombre}/>
           <div className="col col-12 col-sm-8 col-md-8">
             <div className="row">
               {this.props.animales.map(animal => <AnimalCard goToAnimal={this.props.goToAnimal} animal={animal} key={animal.id} />)}

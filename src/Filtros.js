@@ -36,7 +36,7 @@ class Filtros extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="nombre">Nombre</label>
-                        <input type="text" className="form-control" onChange={this.handleNameChange} value={this.state.value} placeholder="Nombre ..."></input>
+                        <input type="text" className="form-control" onChange={this.props.changeNameFilter} value={this.state.value} placeholder="Nombre ..."></input>
                         <span>{this.state.value}s</span>
                     </div>
 
