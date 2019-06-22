@@ -15,7 +15,7 @@ class App extends React.Component {
       {
         id: 1,
         nombre: 'Misha',
-        tipo: 'Roberto',
+        tipo: 'cat',
         raza: 'Caniche',
         barrio: 'Cordón',
         sexo: 'M',
@@ -49,7 +49,7 @@ class App extends React.Component {
         nombre: 'Alf',
         tipo: 'dog',
         raza: 'Caniche',
-        barrio: 'Cordón',
+        barrio: 'Centro',
         sexo: 'M',
         fecha: '16/06/2014',
         ojos: 'Marrones',
@@ -62,10 +62,10 @@ class App extends React.Component {
       },
       {
         id: 4,
-        nombre: '',
+        nombre: 'Ramiro',
         tipo: 'dog',
         raza: 'Caniche',
-        barrio: 'Cordón',
+        barrio: 'Centro',
         sexo: 'M',
         fecha: '16/06/2014',
         ojos: 'Marrones',
@@ -80,9 +80,9 @@ class App extends React.Component {
         id: 5,
         nombre: 'Tupac',
         tipo: 'dog',
-        raza: 'Caniche',
-        barrio: 'Cordón',
-        sexo: 'M',
+        raza: 'Foster',
+        barrio: 'Pocitos',
+        sexo: 'H',
         fecha: '16/06/2014',
         ojos: 'Marrones',
         pelo: 'Marrón',
@@ -97,7 +97,7 @@ class App extends React.Component {
         nombre: 'Eminem',
         tipo: 'dog',
         raza: 'Caniche',
-        barrio: 'Cordón',
+        barrio: 'Pocitos',
         sexo: 'M',
         fecha: '16/06/2014',
         ojos: 'Marrones',
@@ -112,9 +112,9 @@ class App extends React.Component {
         id: 7,
         nombre: 'Rita',
         tipo: 'dog',
-        raza: 'Caniche',
+        raza: 'Foster',
         barrio: 'Cordón',
-        sexo: 'M',
+        sexo: 'H',
         fecha: '16/06/2014',
         ojos: 'Marrones',
         pelo: 'Marrón',
@@ -126,8 +126,8 @@ class App extends React.Component {
       }
 
     ];
-
-    this.wishlist=[];
+    
+    this.wishlist=[]; //Array que carga cada AnimalCard agregada a la lista Wishlist
 
     this.state = {
       section: 1
@@ -147,7 +147,8 @@ class App extends React.Component {
     });
   }
 
-  goToAnimal = (unAnimal) => {          
+  goToAnimal = (unAnimal) => {       
+    console.log("se fue a goToAnimal pues");   
     this.setState({
       section: 3,
       unAnimal : unAnimal
