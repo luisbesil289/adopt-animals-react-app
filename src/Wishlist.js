@@ -11,7 +11,7 @@ class Wishlist extends React.Component {
     }
     render() {
         return (
-            <div className="col col-4">
+            <div className="col col-12 col-sm-12 col-md-6 col-lg-4">
                 <div className="card cardLista">
                     <div className="card-body">
                         <img src={this.props.animal.foto} className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>

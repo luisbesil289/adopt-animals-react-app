@@ -75,15 +75,15 @@ class NewAnimal extends React.Component {
         return (
             <div className="container formNuevoAnimal p-3 mb-5 bg-white rounded">
                 <div className="row justify-content-center">
-                    <div className="col col-sm-12 borderless">
+                    <div className="col col-12 col-sm-12 borderless">
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-row">
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputNombre">Nombre</label>
                                     <input type="text" className="form-control" onChange={this.handleNameChange} value={this.state.name} placeholder="Nombre ..."></input>
                                    
                                 </div>
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputTipo">Tipo</label>
                                     <select onChange={this.handleTipoChange} className="custom-select custom-select-md mb-3">
                                         <option defaultValue={this.state.tipo}>todos...</option>
@@ -91,7 +91,7 @@ class NewAnimal extends React.Component {
                                         <option value="cat">Gato</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputRaza">Raza</label>
                                     <select onChange={this.handleRazaChange} value={this.state.raza} className="custom-select custom-select-md mb-3">
                                         <option defaultValue="3">Raza</option>
@@ -186,7 +186,7 @@ class NewAnimal extends React.Component {
                                         <option value="89">Yorkshire Terrier</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputBarrio">Barrio</label>
                                     <select onChange={this.handleBarrioChange} value={this.state.barrio} className="custom-select custom-select-md mb-3">
                                         <option defaultValue="3">Barrio ...</option>
@@ -196,7 +196,7 @@ class NewAnimal extends React.Component {
                                 </div>
                             </div>
                             <div className="form-row">
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputSexo">Sexo</label>
                                     <select onChange={this.handleSexoChange} value={this.state.sexo} className="custom-select custom-select-md mb-3">
                                         <option defaultValue="3">Sexo ...</option>
@@ -204,12 +204,12 @@ class NewAnimal extends React.Component {
                                         <option value="2">hembra</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputFecha col-md-4">Fecha de nacimiento</label>
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputFecha  col col-12 col-sm-6 col-md-3">Fecha de nacimiento</label>
                                     <input type="date" onChange={this.handleFechaChange} className="custom-select custom-select-md mb-3" name="bday"></input>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputOjos col-md-4">Color de ojos</label>
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputOjos  col col-12 col-sm-6 col-md-3">Color de ojos</label>
                                     <select onChange={this.handleOjosChange} className="custom-select custom-select-md mb-3">
                                         <option defaultValue={this.state.ojos}>Color ...</option>
                                         <option value="Verdes">Verdes</option>
@@ -220,8 +220,8 @@ class NewAnimal extends React.Component {
                                         <option value="Negro">Negro</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputPelo col-md-4">Color de pelo</label>
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputPelo  col col-12 col-sm-6 col-md-3">Color de pelo</label>
                                     <select onChange={this.handlePeloChange} className="custom-select custom-select-md mb-3">
                                         <option defaultValue={this.state.pelo}>Color ...</option>
                                         <option value="1">Blanco</option>
@@ -236,15 +236,15 @@ class NewAnimal extends React.Component {
                                 </div>
                             </div>
                             <div className="form-row">
-                                <div className="form-group col-md-4">
+                                <div className="form-group col col-12">
                                     <label htmlFor="inputnameContact">Nombre de contacto</label>
                                     <input type="text" value={this.state.value} onChange={this.handleNombreContactoChange} className="form-control"></input>
                                 </div>
-                                <div className="form-group col-md-4">
+                                <div className="form-group col col-6">
                                     <label htmlFor="inputPhoneContact">Teléfono de contacto</label>
                                     <input type="text" value={this.state.value} onChange={this.handleTelefonoContactoChange} className="form-control" placeholder="Teléfono ..."></input>
                                 </div>
-                                <div className="form-group col-md-4">
+                                <div className="form-group col col-6">
                                     <label htmlFor="inputEmail">Email de contacto</label>
                                     <input type="email" value={this.state.value} onChange={this.handleEmailContactoChange} className="form-control" placeholder="Email ..."></input>
                                 </div>
