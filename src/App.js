@@ -19,8 +19,8 @@ class App extends React.Component {
         raza: 'Caniche',
         barrio: 'Cordón',
         sexo: 'M',
-        fecha: '16/06/2014',
-        ojos: 'Marrones',
+        fecha: '2019-5-16',
+        ojos: 'Azules',
         pelo: 'Marrón',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
@@ -35,9 +35,9 @@ class App extends React.Component {
         raza: 'Caniche',
         barrio: 'Cordón',
         sexo: 'M',
-        fecha: '16/06/2014',
+        fecha: '2019-3-16',
         ojos: 'Marrones',
-        pelo: 'Marrón',
+        pelo: 'Beije',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
@@ -51,9 +51,9 @@ class App extends React.Component {
         raza: 'Caniche',
         barrio: 'Centro',
         sexo: 'M',
-        fecha: '16/06/2014',
+        fecha: '2017-6-16',
         ojos: 'Marrones',
-        pelo: 'Marrón',
+        pelo: 'Beije',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
@@ -67,7 +67,7 @@ class App extends React.Component {
         raza: 'Caniche',
         barrio: 'Centro',
         sexo: 'M',
-        fecha: '16/06/2014',
+        fecha: '2016-6-16',
         ojos: 'Marrones',
         pelo: 'Marrón',
         nombreContacto: 'Juan Carlos Rodriguez',
@@ -83,9 +83,9 @@ class App extends React.Component {
         raza: 'Foster',
         barrio: 'Pocitos',
         sexo: 'H',
-        fecha: '16/06/2014',
+        fecha: '2015-6-16',
         ojos: 'Marrones',
-        pelo: 'Marrón',
+        pelo: 'Blanco',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
@@ -99,9 +99,9 @@ class App extends React.Component {
         raza: 'Caniche',
         barrio: 'Pocitos',
         sexo: 'M',
-        fecha: '16/06/2014',
+        fecha: '2014-6-16',
         ojos: 'Marrones',
-        pelo: 'Marrón',
+        pelo: 'Negro',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
@@ -115,9 +115,9 @@ class App extends React.Component {
         raza: 'Foster',
         barrio: 'Cordón',
         sexo: 'H',
-        fecha: '16/06/2014',
-        ojos: 'Marrones',
-        pelo: 'Marrón',
+        fecha: '2013-6-16',
+        ojos: 'Negros',
+        pelo: 'Gris',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
@@ -126,8 +126,8 @@ class App extends React.Component {
       }
 
     ];
-    
-    this.wishlist=[]; //Array que carga cada AnimalCard agregada a la lista Wishlist
+
+    this.wishlist = []; //Array que carga cada AnimalCard agregada a la lista Wishlist
 
     this.state = {
       section: 1
@@ -136,7 +136,7 @@ class App extends React.Component {
 
 
   goToHome = () => {
-   this.setState({
+    this.setState({
       section: 1
     });
   }
@@ -147,11 +147,11 @@ class App extends React.Component {
     });
   }
 
-  goToAnimal = (unAnimal) => {       
-    console.log("se fue a goToAnimal pues");   
+  goToAnimal = (unAnimal) => {
+    console.log("se fue a goToAnimal pues");
     this.setState({
       section: 3,
-      unAnimal : unAnimal
+      unAnimal: unAnimal
     });
   }
 
@@ -178,12 +178,12 @@ class App extends React.Component {
       return <NewAnimal newAnimal={this.newAnimal} />;
     }
 
-    if (this.state.section === 3) {            
+    if (this.state.section === 3) {
       return <Animal addToWishlist={this.addToWishlist} unAnimal={this.state.unAnimal} />;
     }
 
     if (this.state.section === 4) {
-     return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist}/>;
+      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist} />;
     }
 
     if (this.state.section === 5) {
@@ -192,46 +192,47 @@ class App extends React.Component {
 
   }
 
-  getNextAnimalId() {    
+  getNextAnimalId() {
     var productWithHighestId = this.animales.sort((a, b) => b.id - a.id)[0];
     if (productWithHighestId === undefined) {
       return 1; // List is empty, so use 1 as first product id.
-    } else {     
+    } else {
       return productWithHighestId.id + 1; // List is not empty, increase one to the highest id for the next product.
     }
 
   }
-  newAnimal = (newAnimal) => {   
-    this.animales.push({ id: this.getNextAnimalId(),
-       nombre: newAnimal.name,
-        tipo: newAnimal.tipo,
-        raza: newAnimal.raza,
-        barrio: newAnimal.barrio,
-        sexo: newAnimal.sexo,
-        fecha: newAnimal.fecha,
-        ojos: newAnimal.ojos,
-        pelo: newAnimal.pelo,
-        nombreContacto: newAnimal.nombreContacto,    
-        telefonoContacto: newAnimal.telefonoContacto,
-        emailContacto: newAnimal.emailContacto,
-        descripcion: newAnimal.descripcion
-        
-      })    
-      console.log(this.animales);
+  newAnimal = (newAnimal) => {
+    this.animales.push({
+      id: this.getNextAnimalId(),
+      nombre: newAnimal.name,
+      tipo: newAnimal.tipo,
+      raza: newAnimal.raza,
+      barrio: newAnimal.barrio,
+      sexo: newAnimal.sexo,
+      fecha: newAnimal.fecha,
+      ojos: newAnimal.ojos,
+      pelo: newAnimal.pelo,
+      nombreContacto: newAnimal.nombreContacto,
+      telefonoContacto: newAnimal.telefonoContacto,
+      emailContacto: newAnimal.emailContacto,
+      descripcion: newAnimal.descripcion
+
+    })
+    console.log(this.animales);
   }
 
 
-  addToWishlist = (animal) => {    
-    this.wishlist.push(animal)    
+  addToWishlist = (animal) => {
+    this.wishlist.push(animal)
   }
-  
 
-  removeToWishlist = ( animal ) => {
-    var i = this.wishlist.indexOf(animal);    
-    this.wishlist.splice(i, 1); 
+
+  removeToWishlist = (animal) => {
+    var i = this.wishlist.indexOf(animal);
+    this.wishlist.splice(i, 1);
     this.goToWishlist();
-}
-  
+  }
+
   render() {
     return (
       <div className="App">

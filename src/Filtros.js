@@ -20,9 +20,9 @@ class Filtros extends React.Component {
 
     render() {
         console.log("Estoy en filtros");
-        var filteredList = this.props.animales        
-            .filter(item => this.state.pName !== '' || this.state.pName !==null || item.nombre === this.state.pName)        
-            .filter(item => this.state.pBarrio !== '' || this.state.pBarrio !==null || item.barrio === this.state.pBarrio)
+        var filteredList = this.props.animales
+            .filter(item => this.state.pName !== '' || this.state.pName !== null || item.nombre === this.state.pName)
+            .filter(item => this.state.pBarrio !== '' || this.state.pBarrio !== null || item.barrio === this.state.pBarrio)
             .sort()
         this.props.retornarAnimalesFiltrados(filteredList);
 
