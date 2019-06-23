@@ -1,72 +1,34 @@
 import React from 'react';
-import AnimalCard from './AnimalCard';
-import './lists.css'
+import './filtros.css';
 
-class Lists extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      tipo: null,
-      name: null,
-      barr: null,
-      raza: null,
-      sexo: null,
-      fech: null,
-      pelo: null,
-      ojos: null
-    };
-  }
-  changeTipoFilter = (event) => {
-    this.setState({ tipo: event.target.value });
-  }
-  changeNameFilter = (event) => {
-    this.setState({ name: event.target.value });
-  }
-  changeBarrioFilter = (event) => {
-    this.setState({ barr: event.target.value });
-  }
-  changeRazaFilter = (event) => {
-    this.setState({ raza: event.target.value });
-  }
-  changeSexoFilter = (event) => {
-    this.setState({ sexo: event.target.value });
-  }
-  changeFechaFilter = (event) => {
-    this.setState({ fech: event.target.value });
-    console.log("fech: " + this.state.fech);
-  }
-  changePeloFilter = (event) => {
-    this.setState({ pelo: event.target.value });
-  }
-  changeOjosFilter = (event) => {
-    this.setState({ ojos: event.target.value });
-  }
-
-  calcularEdad = (a) => { //calcula la edad en numeros enteros
-    var b = new Date()
-    a = new Date(a)
-    return b.getFullYear() - a.getFullYear()
-  }
+class Filtros extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pName: '',
+            pBarrio: ''
+        };
+    }
 
 
-  render() {
+    changeNameFilter = (event) => {
+        this.setState({ pName: event.target.value });
+    }
+    changeBarrioFilter = (event) => {
+        this.setState({ pBarrio: event.target.value });
+    }
 
-    var filteredList = this.props.animales
-      .filter(item => this.state.tipo === null || this.state.tipo === '*' || this.state.tipo === item.tipo)
-      .filter(item => this.state.name === null || this.state.name === '' || this.state.name.toLowerCase() === item.nombre.toLowerCase())
-      .filter(item => this.state.barr === null || this.state.barr === '' || this.state.barr.toLowerCase() === item.barrio.toLowerCase())
-      .filter(item => this.state.raza === null || this.state.raza === '' || this.state.raza === item.raza)
-      .filter(item => this.state.sexo === null || this.state.sexo === '*' || this.state.sexo === item.sexo)
-      .filter(item => this.state.fech === null || this.state.fech === '*' || this.state.fech >= this.calcularEdad(item.fecha))
-      .filter(item => this.state.pelo === null || this.state.pelo === '*' || this.state.pelo === item.pelo)
-      .filter(item => this.state.ojos === null || this.state.ojos === '*' || this.state.ojos === item.ojos)
-      .sort()
+    render() {
+        console.log("Estoy en filtros");
+        var filteredList = this.props.animales
+            .filter(item => this.state.pName !== '' || this.state.pName !== null || item.nombre === this.state.pName)
+            .filter(item => this.state.pBarrio !== '' || this.state.pBarrio !== null || item.barrio === this.state.pBarrio)
+            .sort()
+        this.props.retornarAnimalesFiltrados(filteredList);
 
-    return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="serchVerticalL col col-2 d-none d-md-block">
-            <form className="form" action="">
+        return (
+            <div className="serchVerticalL col col-2 d-none d-md-block">
+                <form className="form" action="">
               <h4>Filtros</h4>
               <hr />
               <div className="form-group">
@@ -143,25 +105,10 @@ class Lists extends React.Component {
                   <option value="Negros">Negros</option>
                 </select>
               </div>
-
             </form>
-          </div>
-          <div className="col col-12 col-sm-8 col-md-8">
-            <div className="row">
-              {filteredList.map(animal => <AnimalCard goToAnimal={this.props.goToAnimal} animal={animal} key={animal.id} />)}
             </div>
-          </div>
-          <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 col-lg-2">
-            <hr />
-            <a href="https://freshpet.com/"><img src="assets/publicidad_01.jpg" className="card-img-top" alt="... "></img></a>
-            <hr />
-            <a href="https://freshpet.com/"><img src="assets/publicidad_02.jpg" className="card-img-top" alt="... "></img></a>
-            <hr />
-          </aside>
-        </div>
-      </div>
-    );
-  }
-}
 
-export default Lists;
+        )
+    }
+}
+export default Filtros;
