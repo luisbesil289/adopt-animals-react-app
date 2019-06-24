@@ -32,9 +32,9 @@ body {
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
   }
-  .flotante {
+ /*  .flotante {
       display: none;
-  }
+  } */
 }
 
 @media all and (min-width: 670px) {

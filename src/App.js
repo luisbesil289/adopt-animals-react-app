@@ -26,22 +26,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_misha_01.jpg'
+            fotito: 'assets/carrusel_misha_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_misha_02.jpg'
+            fotito: 'assets/carrusel_misha_02.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_misha_03.jpg'
+            fotito: 'assets/carrusel_misha_03.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_misha_04.jpg'
+            fotito: 'assets/carrusel_misha_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -58,22 +58,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_roberto_04.jpg'
+            fotito: 'assets/carrusel_roberto_04.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_roberto_01.jpg'
+            fotito: 'assets/carrusel_roberto_01.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_roberto_02.jpg'
+            fotito: 'assets/carrusel_roberto_02.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_roberto_03.jpg'
+            fotito: 'assets/carrusel_roberto_03.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -90,22 +90,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_alf_01.jpg'
+            fotito: 'assets/carrusel_alf_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_alf_02.jpg'
+            fotito: 'assets/carrusel_alf_02.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_alf_03.jpg'
+            fotito: 'assets/carrusel_alf_03.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_alf_04.jpg'
+            fotito: 'assets/carrusel_alf_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -122,22 +122,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_burbuja_01.jpg'
+            fotito: 'assets/carrusel_burbuja_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_burbuja_02.jpg'
+            fotito: 'assets/carrusel_burbuja_02.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_burbuja_03.jpg'
+            fotito: 'assets/carrusel_burbuja_03.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_burbuja_04.jpg'
+            fotito: 'assets/carrusel_burbuja_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -154,22 +154,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_tupac_01.jpg'
+            fotito: 'assets/carrusel_tupac_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_tupac_02.jpg'
+            fotito: 'assets/carrusel_tupac_02.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_tupac_03.jpg'
+            fotito: 'assets/carrusel_tupac_03.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_tupac_04.jpg'
+            fotito: 'assets/carrusel_tupac_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -186,22 +186,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_eminem_01.jpg'
+            fotito: 'assets/carrusel_eminem_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_eminem_02.jpg'
+            fotito: 'assets/carrusel_eminem_02.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_eminem_03.jpg'
+            fotito: 'assets/carrusel_eminem_03.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_eminem_04.jpg'
+            fotito: 'assets/carrusel_eminem_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -218,22 +218,22 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto:[
+        foto: [
           {
             id: 1,
-            fotito:'assets/carrusel_rita_01.jpg'
+            fotito: 'assets/carrusel_rita_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/carrusel_rita_02.jpg'
+            fotito: 'assets/carrusel_rita_02.jpg'
           },
           {
             id: 3,
-            fotito:'assets/carrusel_rita_03.jpg'
+            fotito: 'assets/carrusel_rita_03.jpg'
           },
           {
             id: 4,
-            fotito:'assets/carrusel_rita_04.jpg'
+            fotito: 'assets/carrusel_rita_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       }
@@ -320,7 +320,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 5) {
-      return <ListBlogs blog={this.blog} addToBlog={this.addToBlog}/>;
+      return <ListBlogs blog={this.blog} addToBlog={this.addToBlog} />;
     }
 
     if (this.state.section === 6) {
@@ -367,11 +367,11 @@ class App extends React.Component {
     console.log(this.animales);
   }
 
-
   addToWishlist = (animal) => {
-    this.wishlist.push(animal)
+   if (this.wishlist.indexOf(animal) === -1) { //este IF evita que el mismo animal se cawrgue mas de una vez al hacer click
+      this.wishlist.push(animal)
+    }
   }
-
 
   removeToWishlist = (animal) => {
     var i = this.wishlist.indexOf(animal);
@@ -379,17 +379,17 @@ class App extends React.Component {
     this.goToWishlist();
   }
 
-  addToBlog = (newBlog) => {    
-   this.blog.push({
+  addToBlog = (newBlog) => {
+    this.blog.push({
       id: this.getNextBlogId(),
       titulo: newBlog.titulo,
       familia: newBlog.familia,
       fecha: newBlog.fecha,
       foto: newBlog.foto,
       comentario: newBlog.comentario
-    }    
-    ) 
-    return <ListBlogs blog={this.blog} addToBlog={this.addToBlog}/>;
+    }
+    )
+    return <ListBlogs blog={this.blog} addToBlog={this.addToBlog} />;
   }
 
   render() {

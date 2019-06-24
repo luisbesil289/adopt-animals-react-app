@@ -6,17 +6,18 @@ class Animal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            unAnimal: this.props.unAnimal
+            unAnimal: this.props.unAnimal,
+            value: 'enabled'
         };
 
     }
 
-    handleSubmit = (event) => {       
-        event.preventDefault();
-        this.props.addToWishlist(this.state.unAnimal); 
-          
+    handleSubmit = (event) => {
+       event.preventDefault();
+        this.props.addToWishlist(this.state.unAnimal);
+        this.setState({ value: '' });
 
-    };   
+    };
 
     render() {
         return (
@@ -43,7 +44,7 @@ class Animal extends React.Component {
                             </ul>
                             <hr />
                             <p>{this.state.unAnimal.descripcion}</p>
-                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit.bind(this)}>Agregar a la Wishlist</button>
+                            <button type="button" disabled={!this.state.value} className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit.bind(this)}>Agregar a la Wishlist</button>
                             <hr />
 
                             <h4 className="card-text">Datos del Contacto</h4>

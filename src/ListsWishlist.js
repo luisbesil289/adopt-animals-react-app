@@ -19,7 +19,7 @@ class ListsWishlist extends React.Component {
               {this.props.wishlist.map(animal => <Wishlist goToWishlist={this.props.goToWishlist} removeToWishlist={this.props.removeToWishlist} animal={animal} key={animal.id} />)}
             </div>
           </div>
-          <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 col-lg-2">
+          <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 col-lg-2">           
             <hr />
             <a href="https://freshpet.com/"><img src="assets/publicidad_01.jpg" className="card-img-top" alt="... "></img></a>
             <hr />
