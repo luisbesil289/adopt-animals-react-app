@@ -1,0 +1,23 @@
+.modal-content {
+  border-right: 2px solid #d6e9ff;
+  text-align: center;
+  color: black;
+  background-color: #dbedff!important;
+  color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 5px #888888;
+  padding:5px;
+}
+
+.modal-content label{ 
+  padding:5px;
+  color: black;
+ }
+
+.form-control {
+  position: relative; 
+    left: 10%;     
+    width:80%;   
+    font-family:Verdana, Geneva, sans-serif;
+    box-shadow: 5px 5px 9px #888888;
+    padding:5px;
+}

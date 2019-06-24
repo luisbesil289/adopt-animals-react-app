@@ -1,6 +1,6 @@
 import React from 'react';
+import './listBlogs.css';
 import BlogCard from './BlogCard';
-
 
 class ListBlogs extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class ListBlogs extends React.Component {
   }
 
   limpiarForm = () =>{
-    event.target.value= "";
+    
   }
 
   
