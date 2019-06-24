@@ -94,8 +94,8 @@ class Lists extends React.Component {
                 <label htmlFor="sexo">Sexo</label>
                 <select className="custom-select custom-select-md" onChange={this.changeSexoFilter}>
                   <option defaultValue="all">*</option>
-                  <option value="M">M</option>
-                  <option value="H">H</option>
+                  <option value="M">Macho</option>
+                  <option value="H">Hembra</option>
                 </select>
               </div>
               <div className="form-group">

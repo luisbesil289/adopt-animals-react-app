@@ -54,7 +54,7 @@ class App extends React.Component {
         sexo: 'M',
         fecha: '2019-3-16',
         ojos: 'Marrones',
-        pelo: 'Beije',
+        pelo: 'Blanco',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
@@ -139,7 +139,7 @@ class App extends React.Component {
             id: 4,
             fotito: 'assets/carrusel_burbuja_04.jpg'
           }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        descripcion: 'Toda si vida intentó ser bueno. Y es cierto que muchas veces falló... Despues de todo él era solo un humano, no era un perro como yo.'
       },
       {
         id: 5,
@@ -149,7 +149,7 @@ class App extends React.Component {
         barrio: 'Pocitos',
         sexo: 'M',
         fecha: '2015-6-16',
-        ojos: 'Celestes',
+        ojos: 'Azules',
         pelo: 'Beige',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
@@ -171,7 +171,7 @@ class App extends React.Component {
             id: 4,
             fotito: 'assets/carrusel_tupac_04.jpg'
           }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        descripcion: 'es un hermoso y tierno perrito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón, a pesar de tener un pelaje abultado y blanco disfruta mucho recostarse bajo el sol de la tarde, generalmente cuando tiene hambre llora un poco para llamar la atención y que le den su comida no le gusta quedarse solo muy por el contrario le gusta que lo saquen a pasear sin su correa.'
       },
       {
         id: 6,
@@ -209,7 +209,7 @@ class App extends React.Component {
         id: 7,
         nombre: 'Rita',
         tipo: 'dog',
-        raza: 'Foster',
+        raza: 'chihuahua',
         barrio: 'Cordón',
         sexo: 'H',
         fecha: '2013-6-16',
@@ -368,7 +368,7 @@ class App extends React.Component {
   }
 
   addToWishlist = (animal) => {
-   if (this.wishlist.indexOf(animal) === -1) { //este IF evita que el mismo animal se cawrgue mas de una vez al hacer click
+    if (this.wishlist.indexOf(animal) === -1) { //este IF evita que el mismo animal se cawrgue mas de una vez al hacer click
       this.wishlist.push(animal)
     }
   }

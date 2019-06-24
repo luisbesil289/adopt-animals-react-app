@@ -14,17 +14,16 @@ class Wishlist extends React.Component {
             <div className="col col-12 col-sm-12 col-md-6 col-lg-4">
                 <div className="card cardLista">
                     <div className="card-body">
-                        <img src={this.props.animal.foto[0].fotito} className="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></img>
-                        <h4 className="card-title">{this.props.animal.nombre}</h4>
-                        <p className="card-text">{this.props.animal.fecha}</p>
+                        <img src={this.props.animal.foto[0].fotito} className="rounded-circle mr-3" height="70px" width="80px" alt="avatar"></img>
+                        <hr />
+                        <h3 className="card-title">{this.props.animal.nombre}</h3>
+                        <p className="card-text" id="pCardText">{this.props.animal.fecha}</p>
                         <h4 className="card-title">{this.props.animal.raza}</h4>
                         <hr />
-                        <p className="card-text">Datos del Contacto</p>
-                        <ul>
-                            <li className="card-text">{this.props.animal.nombreContacto}</li>
-                            <li className="card-text">{this.props.animal.telefonoContacto}</li>
-                            <li className="card-text">{this.props.animal.emailContacto}</li>
-                        </ul>
+                        <h3 className="card-title">Contacto</h3>
+                        <p className="card-text">{this.props.animal.nombreContacto}</p>
+                        <p className="card-text">{this.props.animal.telefonoContacto}</p>
+                        <p className="card-text">{this.props.animal.emailContacto}</p>
                         <hr />
                         <button type="button" onClick={(e) => this.props.removeToWishlist(this.state.unAnimal, e)} className="btn btn-warning">Quitar</button>
                         <hr />
