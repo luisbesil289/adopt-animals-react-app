@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimalCarrusel from './AnimalCarrusel.js'
+import './Animal.css'
 
 class Animal extends React.Component {
     constructor(props) {
@@ -10,9 +11,10 @@ class Animal extends React.Component {
 
     }
 
-    handleSubmit = (event) => {
+    handleSubmit = (event) => {       
         event.preventDefault();
-        this.props.addToWishlist(this.state.unAnimal);      
+        this.props.addToWishlist(this.state.unAnimal); 
+          
 
     };   
 
@@ -23,7 +25,7 @@ class Animal extends React.Component {
                     <div className="col col-sm-12 col-md-6">
                         <div className="card cardAnimal card-body">
                             <div className="cardFicha">
-                                <h4 className="card-title font-weight-bold">{this.state.unAnimal.nombre}</h4>
+                                <h2 className="card-title font-weight-bold">{this.state.unAnimal.nombre}</h2>
                                 <h4 className="card-title">{this.state.unAnimal.raza}</h4>
                             </div>
                             <hr />
@@ -41,7 +43,7 @@ class Animal extends React.Component {
                             </ul>
                             <hr />
                             <p>{this.state.unAnimal.descripcion}</p>
-                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit}>Agregar a la Wishlist</button>
+                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit.bind(this)}>Agregar a la Wishlist</button>
                             <hr />
 
                             <h4 className="card-text">Datos del Contacto</h4>

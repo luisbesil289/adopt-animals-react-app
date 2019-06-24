@@ -17,11 +17,11 @@ class App extends React.Component {
         id: 1,
         nombre: 'Misha',
         tipo: 'cat',
-        raza: 'Caniche',
+        raza: 'Mau Egipcio',
         barrio: 'Cordón',
-        sexo: 'M',
+        sexo: 'H',
         fecha: '2019-5-16',
-        ojos: 'Azules',
+        ojos: 'Marrones',
         pelo: 'Marrón',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
@@ -29,11 +29,19 @@ class App extends React.Component {
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_10.jpg'
+            fotito:'assets/carrusel_misha_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/dog_11.jpg'
+            fotito:'assets/carrusel_misha_02.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_misha_03.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_misha_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -53,7 +61,7 @@ class App extends React.Component {
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_12.jpg'
+            fotito:'assets/carrusel_roberto_04.jpg'
           },
           {
             id: 2,
@@ -73,7 +81,7 @@ class App extends React.Component {
         id: 3,
         nombre: 'Alf',
         tipo: 'dog',
-        raza: 'Caniche',
+        raza: 'Golden retriever',
         barrio: 'Centro',
         sexo: 'M',
         fecha: '2017-6-16',
@@ -85,59 +93,83 @@ class App extends React.Component {
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_10.jpg'
+            fotito:'assets/carrusel_alf_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/dog_11.jpg'
+            fotito:'assets/carrusel_alf_02.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_alf_03.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_alf_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
         id: 4,
-        nombre: 'Ramiro',
+        nombre: 'Burbuja',
         tipo: 'dog',
-        raza: 'Caniche',
+        raza: 'Boxer',
         barrio: 'Centro',
-        sexo: 'M',
+        sexo: 'H',
         fecha: '2016-6-16',
         ojos: 'Marrones',
-        pelo: 'Marrón',
+        pelo: 'Atigrado',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_10.jpg'
+            fotito:'assets/carrusel_burbuja_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/dog_11.jpg'
+            fotito:'assets/carrusel_burbuja_02.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_burbuja_03.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_burbuja_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
         id: 5,
         nombre: 'Tupac',
-        tipo: 'dog',
-        raza: 'Foster',
+        tipo: 'cat',
+        raza: 'Siames',
         barrio: 'Pocitos',
-        sexo: 'H',
+        sexo: 'M',
         fecha: '2015-6-16',
-        ojos: 'Marrones',
-        pelo: 'Blanco',
+        ojos: 'Celestes',
+        pelo: 'Beige',
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_10.jpg'
+            fotito:'assets/carrusel_tupac_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/dog_11.jpg'
+            fotito:'assets/carrusel_tupac_02.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_tupac_03.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_tupac_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -145,7 +177,7 @@ class App extends React.Component {
         id: 6,
         nombre: 'Eminem',
         tipo: 'dog',
-        raza: 'Caniche',
+        raza: 'Pug',
         barrio: 'Pocitos',
         sexo: 'M',
         fecha: '2014-6-16',
@@ -157,11 +189,19 @@ class App extends React.Component {
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_10.jpg'
+            fotito:'assets/carrusel_eminem_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/dog_11.jpg'
+            fotito:'assets/carrusel_eminem_02.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_eminem_03.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_eminem_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
@@ -181,11 +221,19 @@ class App extends React.Component {
         foto:[
           {
             id: 1,
-            fotito:'assets/dog_10.jpg'
+            fotito:'assets/carrusel_rita_01.jpg'
           },
           {
             id: 2,
-            fotito:'assets/dog_11.jpg'
+            fotito:'assets/carrusel_rita_02.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_rita_03.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_rita_04.jpg'
           }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       }
@@ -206,7 +254,7 @@ class App extends React.Component {
       titulo: 'Se agrando la familia',
       familia: 'Lopez',
       fecha: '2018-6-16',
-      foto: 'assets/gatos_familia_01.jpg',
+      foto: 'assets/perro_familia_01.jpg',
       comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
     }];
 
