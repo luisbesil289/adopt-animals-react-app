@@ -7,7 +7,7 @@ import Lists from './Lists';
 import ListsWishlist from './ListsWishlist';
 import Animal from './Animal';
 import Test from './Test';
-import ListBlogs from './ListBlogs';
+import BlogsList from './BlogsList';
 
 class App extends React.Component {
   constructor(props) {
@@ -320,7 +320,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 5) {
-      return <ListBlogs blog={this.blog} addToBlog={this.addToBlog} />;
+      return <BlogsList blog={this.blog} addToBlog={this.addToBlog} />;
     }
 
     if (this.state.section === 6) {
@@ -389,7 +389,7 @@ class App extends React.Component {
       comentario: newBlog.comentario
     }
     )
-    return <ListBlogs blog={this.blog} addToBlog={this.addToBlog} />;
+    return <BlogsList blog={this.blog} addToBlog={this.addToBlog} />;
   }
 
   render() {

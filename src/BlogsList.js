@@ -1,8 +1,8 @@
 import React from 'react';
-import './listBlogs.css';
+import './blogList.css';
 import BlogCard from './BlogCard';
 
-class ListBlogs extends React.Component {
+class BlogsList extends React.Component {
   constructor(props) {
     super(props);
     this.unBlog = []
@@ -118,4 +118,4 @@ class ListBlogs extends React.Component {
   }
 }
 
-export default ListBlogs;
+export default BlogsList;
