@@ -64,8 +64,8 @@ class Lists extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="serchVerticalL col col-2 d-none d-md-block">
-            <form className="form" action="">
+          <div className="serchVerticalL col col-12 col-sm-2 col-md-2 d-md-block">
+            <form className="form">
               <h4>Filtros</h4>
               <hr />
               <div className="form-group">
@@ -150,7 +150,7 @@ class Lists extends React.Component {
               {filteredList.map(animal => <AnimalCard goToAnimal={this.props.goToAnimal} animal={animal} key={animal.id} />)}
             </div>
           </div>
-          <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 col-lg-2">
+          <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 d-none d-md-block">
             <hr />
             <a href="https://freshpet.com/"><img src="assets/publicidad_01.jpg" className="card-img-top" alt="... "></img></a>
             <hr />
