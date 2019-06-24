@@ -1,7 +1,7 @@
 import React from 'react';
 
 class AnimalCarrusel extends React.Component {
-    
+
     render() {
         return (
             <React.Fragment>
@@ -10,7 +10,6 @@ class AnimalCarrusel extends React.Component {
             </div>
             </React.Fragment>
         )
-    }
-  
+    }  
 }
 export default AnimalCarrusel;

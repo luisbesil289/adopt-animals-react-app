@@ -82,30 +82,28 @@ class ListBlogs extends React.Component {
 
             {/* MODAL CONTENT */}
             <div className="modal-content">
-              <form action="/action_page.php">
+              <form>
                 <div className="form-group">
                   <label htmlFor="text">Titulo</label>
-                  <input type="text" className="form-control" onChange={this.changeTitulo}></input>
+                  <input type="text" className="form-control-2" onChange={this.changeTitulo}></input>
                 </div>
                 <div className="form-group">
                   <label htmlFor="text">Familia</label>
-                  <input type="text" className="form-control" onChange={this.changeFamilia} value=""></input>
+                  <input type="text" className="form-control-2" onChange={this.changeFamilia}></input>
                 </div>
                 <div className="form-group">
                   <label htmlFor="inputFecha">Fecha de Adopcion</label>
-                  <input type="date" className="form-control" onChange={this.changeFecha} value=""></input>
+                  <input type="date" className="form-control-2" onChange={this.changeFecha}></input>
                 </div>
                 <div className="form-group">
                   <label htmlFor="text">Foto</label>
                   <br />
                   <br />
-                  <input id="file" type="file" className="form-control" accept="image/png, image/jpeg" onChange={this.changeFoto} value=""/>
-                  {/* <label htmlFor="text">Foto</label> */}
-                  {/* <input type="text" className="form-control" onChange={this.changeFoto}></input> */}
+                  <input id="file" type="file" className="form-control-2" accept="image/png, image/jpeg" onChange={this.changeFoto}/>                 
                 </div>
                 <div className="form-group">
                   <label htmlFor="text">Comentario</label>
-                  <textarea type="text" className="form-control" onChange={this.changeComentario} value=""></textarea>
+                  <textarea type="text" className="form-control-2" onChange={this.changeComentario}></textarea>
                 </div>
                 <div className="checkbox">
                 </div>
@@ -116,14 +114,6 @@ class ListBlogs extends React.Component {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
     );
   }
 }

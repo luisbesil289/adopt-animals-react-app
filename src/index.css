@@ -79,7 +79,7 @@ h5 {
 }
 
 p {
-  font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-align: justify;
   text-indent: 10px;
@@ -95,8 +95,7 @@ p {
 }
 
 .card .card-body {
-  background-color: rgb(240, 251, 255);
-  
+  background-color: rgb(240, 251, 255);  
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right;
@@ -147,13 +146,6 @@ p {
   padding-left: 10px;
   padding-right: 10px;
 }
-
-/* .serchVerticalL {
-  border-right: 2px solid #b3d7ff;
-  text-align: left;
-  background-color: #343a40!important;
-  color: rgb(255, 255, 255);
-} */
 
 .serchVerticalR {
   border-left: 2px solid #b3d7ff;
