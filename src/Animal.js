@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimalCarrusel from './AnimalCarrusel.js'
 
 class Animal extends React.Component {
     constructor(props) {
@@ -11,19 +12,9 @@ class Animal extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.addToWishlist(this.state.unAnimal);
-        /* this.componentDidMount(); */
+        this.props.addToWishlist(this.state.unAnimal);      
 
-
-    };
-
-/*     componentDidMount() {
-        window.setTimeout(function () {
-            this.setState({
-                isButtonDisabled: false,
-            })
-        }, 5000)
-    } */
+    };   
 
     render() {
         return (
@@ -78,17 +69,9 @@ class Animal extends React.Component {
                     <div className="col col-sm-12 col-md-6">
                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner">
+                                {this.state.unAnimal.foto.map(foto => <AnimalCarrusel foto={foto} key={foto.id} />)}
                                 <div className="carousel-item active">
-                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={this.state.unAnimal.foto} className="d-block w-100" alt="..."></img>
+                                    <img src={this.state.unAnimal.foto[0].fotito} className="d-block w-100" alt="..."></img>
                                 </div>
                             </div>
                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

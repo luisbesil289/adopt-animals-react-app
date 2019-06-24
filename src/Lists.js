@@ -32,8 +32,7 @@ class Lists extends React.Component {
     this.setState({ sexo: event.target.value });
   }
   changeFechaFilter = (event) => {
-    this.setState({ fech: event.target.value });
-    console.log("fech: " + this.state.fech);
+    this.setState({ fech: event.target.value });   
   }
   changePeloFilter = (event) => {
     this.setState({ pelo: event.target.value });

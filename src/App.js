@@ -26,7 +26,15 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/cat_03.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_10.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/dog_11.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
@@ -42,7 +50,23 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/dog_11.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_12.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/carrusel_roberto_01.jpg'
+          },
+          {
+            id: 3,
+            fotito:'assets/carrusel_roberto_02.jpg'
+          },
+          {
+            id: 4,
+            fotito:'assets/carrusel_roberto_03.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
@@ -58,7 +82,15 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/dog_06.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_10.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/dog_11.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
@@ -74,7 +106,15 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/dog_07.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_10.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/dog_11.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
@@ -90,7 +130,15 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/dog_08.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_10.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/dog_11.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
@@ -106,7 +154,15 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/dog_09.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_10.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/dog_11.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       },
       {
@@ -122,7 +178,15 @@ class App extends React.Component {
         nombreContacto: 'Juan Carlos Rodriguez',
         telefonoContacto: '094 236 444',
         emailContacto: 'l.besil@hotmail.com',
-        foto: 'assets/dog_10.jpg',
+        foto:[
+          {
+            id: 1,
+            fotito:'assets/dog_10.jpg'
+          },
+          {
+            id: 2,
+            fotito:'assets/dog_11.jpg'
+          }],
         descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
       }
 
@@ -164,7 +228,6 @@ class App extends React.Component {
   }
 
   goToAnimal = (unAnimal) => {
-    console.log("se fue a goToAnimal pues");
     this.setState({
       section: 3,
       unAnimal: unAnimal
@@ -298,7 +361,7 @@ class App extends React.Component {
                 <a className="nav-link" href="#NewAnimal" onClick={this.goToNew}>Nuevo Animal</a>
               </li>
               <li className="nav-item active">
-                {/* <a className="nav-link" href="#Animal" onClick={this.goToAnimal}>Animal</a> */}
+                <a className="nav-link" href="#Test" onClick={this.goToTest}>Test</a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#Wishlist" onClick={this.goToWishlist}>Wishlist <span className="sr-only"></span></a>
