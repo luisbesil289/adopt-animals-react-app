@@ -7,6 +7,7 @@ import Lists from './Lists';
 import ListsWishlist from './ListsWishlist';
 import Animal from './Animal';
 import Test from './Test';
+import ListBlogs from './ListBlogs';
 
 class App extends React.Component {
   constructor(props) {
@@ -129,11 +130,26 @@ class App extends React.Component {
 
     this.wishlist = []; //Array que carga cada AnimalCard agregada a la lista Wishlist
 
+    this.blog = [{
+      id: 1,
+      titulo: 'Hermosos Gatitos',
+      familia: 'Rodriguez',
+      fecha: '2013-6-16',
+      foto: 'assets/gatos_familia_01.jpg',
+      comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
+    }, {
+      id: 2,
+      titulo: 'Se agrando la familia',
+      familia: 'Lopez',
+      fecha: '2018-6-16',
+      foto: 'assets/gatos_familia_01.jpg',
+      comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
+    }];
+
     this.state = {
       section: 1
     };
   }
-
 
   goToHome = () => {
     this.setState({
@@ -161,9 +177,15 @@ class App extends React.Component {
     });
   }
 
-  goToTest = () => {
+  goToBlog = () => {
     this.setState({
       section: 5
+    });
+  }
+
+  goToTest = () => {
+    this.setState({
+      section: 6
     });
   }
 
@@ -187,6 +209,10 @@ class App extends React.Component {
     }
 
     if (this.state.section === 5) {
+      return <ListBlogs blog={this.blog} addToBlog={this.addToBlog}/>;
+    }
+
+    if (this.state.section === 6) {
       return <Test />;
     }
 
@@ -199,8 +225,17 @@ class App extends React.Component {
     } else {
       return productWithHighestId.id + 1; // List is not empty, increase one to the highest id for the next product.
     }
-
   }
+
+  getNextBlogId() {
+    var productWithHighestId = this.blog.sort((a, b) => b.id - a.id)[0];
+    if (productWithHighestId === undefined) {
+      return 1; // List is empty, so use 1 as first product id.
+    } else {
+      return productWithHighestId.id + 1; // List is not empty, increase one to the highest id for the next product.
+    }
+  }
+
   newAnimal = (newAnimal) => {
     this.animales.push({
       id: this.getNextAnimalId(),
@@ -233,6 +268,19 @@ class App extends React.Component {
     this.goToWishlist();
   }
 
+  addToBlog = (newBlog) => {    
+   this.blog.push({
+      id: this.getNextBlogId(),
+      titulo: newBlog.titulo,
+      familia: newBlog.familia,
+      fecha: newBlog.fecha,
+      foto: newBlog.foto,
+      comentario: newBlog.comentario
+    }    
+    ) 
+    return <ListBlogs blog={this.blog} addToBlog={this.addToBlog}/>;
+  }
+
   render() {
     return (
       <div className="App">
@@ -256,7 +304,7 @@ class App extends React.Component {
                 <a className="nav-link" href="#Wishlist" onClick={this.goToWishlist}>Wishlist <span className="sr-only"></span></a>
               </li>
               <li className="nav-item active">
-                {/* <a className="nav-link" href="#Test" onClick={this.goToTest}>Test <span className="sr-only"></span></a> */}
+                <a className="nav-link" href="#ListBlogs" onClick={this.goToBlog}>Blog <span className="sr-only"></span></a>
               </li>
             </ul>
             <button className="LogIn btn btn-outline-light" type="submit"> LogIn - Register</button>
