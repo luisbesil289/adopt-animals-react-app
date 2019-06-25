@@ -47,6 +47,13 @@ class Lists extends React.Component {
     return b.getFullYear() - a.getFullYear()
   }
 
+  handleClick = () => {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+    console.log(this.state.isToggleOn);
+  }
+
 
   render() {
 
@@ -65,6 +72,12 @@ class Lists extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="serchVerticalL col col-12 col-sm-2 col-md-2 d-md-block">
+
+          <nav className="navbar sticky-top">              
+          <button className="btn btn-secondary btn-block shadow p-1 rounded" type="button" onClick={this.handleClick} value={this.state.isToggleOn ? 'ON' : 'OFF'} data-toggle="collapse" data-target="#navbarText">click</button>
+                <div className="collapse navbar-collapse show" id="navbarText">
+
+
             <form className="form">
               <h4>Filtros</h4>
               <hr />
@@ -144,6 +157,11 @@ class Lists extends React.Component {
               </div>
 
             </form>
+
+            </div>
+              </nav>
+
+
           </div>
           <div className="col col-12 col-sm-8 col-md-8">
             <div className="row">
