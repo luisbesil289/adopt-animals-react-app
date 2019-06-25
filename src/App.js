@@ -305,7 +305,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 3) {
-      return <Animal addToWishlist={this.addToWishlist} unAnimal={this.state.unAnimal} />;
+      return <Animal addToWishlist={this.addToWishlist} unAnimal={this.state.unAnimal} removeToAnimales={this.removeToAnimales}/>;
     }
 
     if (this.state.section === 4) {
@@ -353,7 +353,14 @@ class App extends React.Component {
       descripcion: newAnimal.descripcion
 
     })
-    console.log(this.animales);
+  }
+
+  removeToAnimales = (animal) => {
+    console.log("Llegó hasta aca");
+    console.log(animal);
+    var i = this.animales.indexOf(animal);
+    this.animales.splice(i, 1);
+    this.goToHome();
   }
 
   addToWishlist = (animal) => {

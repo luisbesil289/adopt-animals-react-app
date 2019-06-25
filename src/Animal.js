@@ -65,7 +65,7 @@ class Animal extends React.Component {
                             <button type="button" className="btn btn-info btn-block shadow p-2 rounded">Contactar</button>
                             <hr />
 
-                            <button type="button" className="btn btn-success btn-block shadow p-3 rounded">Adoptar</button>
+                            <button type="button" className="btn btn-success btn-block shadow p-3 rounded" onClick={(e) => this.props.removeToAnimales(this.state.unAnimal, e)}>Adoptar</button>
                         </div>
                     </div>
 
