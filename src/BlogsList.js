@@ -53,29 +53,14 @@ class BlogsList extends React.Component {
               <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal2">Nuevo</button>
             </div>
             <hr />
-            <h5 className="card-title">Archivo</h5>
-            <ul className="list-group list-group-item-info">
-              <hr />
-              <h2 className="card-title">2019</h2>
-              <hr />
-              <li className="list-group-item">
-                <h6>Cras justo odio</h6>
-              </li>
-              <li className="list-group-item">Cras justo odio</li>
-              <li className="list-group-item">Dapibus ac facilisis in</li>
-              <li className="list-group-item">Morbi leo risus</li>
-              <li className="list-group-item">Porta ac consectetur ac</li>
-              <li className="list-group-item">Vestibulum at eros</li>
-              <hr />
-              <h2 className="card-title">2018</h2>
-              <hr />
-              <li className="list-group-item">
-                <h6>Cras justo odio</h6>
-              </li>
-              <li className="list-group-item">Morbi leo risus</li>
-              <li className="list-group-item">Porta ac consectetur ac</li>
-              <li className="list-group-item">Vestibulum at eros</li>
-            </ul>
+           
+            <aside className="serchVerticalR col d-none d-md-block">
+            <hr />
+            <a href="https://freshpet.com/"><img src="assets/publicidad_01.jpg" className="card-img-top" alt="... "></img></a>
+            <hr />
+            <a href="https://freshpet.com/"><img src="assets/publicidad_02.jpg" className="card-img-top" alt="... "></img></a>
+            <hr />
+          </aside>
           </div>
         </div>
 

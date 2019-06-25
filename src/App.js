@@ -170,7 +170,7 @@ class App extends React.Component {
             id: 4,
             fotito: 'assets/carrusel_tupac_04.jpg'
           }],
-        descripcion: 'es un hermoso y tierno perrito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón, a pesar de tener un pelaje abultado y blanco disfruta mucho recostarse bajo el sol de la tarde, generalmente cuando tiene hambre llora un poco para llamar la atención y que le den su comida no le gusta quedarse solo muy por el contrario le gusta que lo saquen a pasear sin su correa.'
+        descripcion: 'Es un hermoso y tierno gatito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón, a pesar de tener un pelaje abultado y blanco disfruta mucho recostarse bajo el sol de la tarde.'
       },
       {
         id: 6,
