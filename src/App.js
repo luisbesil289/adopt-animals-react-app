@@ -6,7 +6,6 @@ import Footer from './Footer.js';
 import Lists from './Lists';
 import ListsWishlist from './ListsWishlist';
 import Animal from './Animal';
-import Test from './Test';
 import BlogsList from './BlogsList';
 
 class App extends React.Component {
@@ -294,12 +293,6 @@ class App extends React.Component {
     });
   }
 
-  goToTest = () => {
-    this.setState({
-      section: 6
-    });
-  }
-
   currentSection() {
     /* alert(this.state.section); */
 
@@ -321,10 +314,6 @@ class App extends React.Component {
 
     if (this.state.section === 5) {
       return <BlogsList blog={this.blog} addToBlog={this.addToBlog} />;
-    }
-
-    if (this.state.section === 6) {
-      return <Test />;
     }
 
   }
@@ -407,9 +396,6 @@ class App extends React.Component {
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#NewAnimal" onClick={this.goToNew}>Nuevo Animal</a>
-              </li>
-              <li className="nav-item active">
-                <a className="nav-link" href="#Test" onClick={this.goToTest}>Test</a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#Wishlist" onClick={this.goToWishlist}>Wishlist <span className="sr-only"></span></a>
