@@ -7,6 +7,7 @@ import Lists from './Lists';
 import ListsWishlist from './ListsWishlist';
 import Animal from './Animal';
 import BlogsList from './BlogsList';
+import Felicidades from './Felicidades';
 
 class App extends React.Component {
   constructor(props) {
@@ -293,9 +294,14 @@ class App extends React.Component {
     });
   }
 
-  currentSection() {
-    /* alert(this.state.section); */
+  goToFelicidades = (animal) => {
+    this.setState({
+      section: 6,
+      animal: animal
+    });
+  }
 
+  currentSection() {
     if (this.state.section === 1) {
       return <Lists goToAnimal={this.goToAnimal} animales={this.animales} />;
     }
@@ -305,7 +311,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 3) {
-      return <Animal addToWishlist={this.addToWishlist} unAnimal={this.state.unAnimal} removeToAnimales={this.removeToAnimales}/>;
+      return <Animal addToWishlist={this.addToWishlist} unAnimal={this.state.unAnimal} removeToAnimales={this.removeToAnimales} />;
     }
 
     if (this.state.section === 4) {
@@ -314,6 +320,10 @@ class App extends React.Component {
 
     if (this.state.section === 5) {
       return <BlogsList blog={this.blog} addToBlog={this.addToBlog} />;
+    }
+
+    if (this.state.section === 6) {
+      return <Felicidades animal={this.state.animal}/>;
     }
 
   }
@@ -356,12 +366,11 @@ class App extends React.Component {
   }
 
   removeToAnimales = (animal) => {
-    console.log("Llegó hasta aca");
-    console.log(animal);
     var i = this.animales.indexOf(animal);
     this.animales.splice(i, 1);
-    this.goToHome();
+    this.goToFelicidades(animal);
   }
+
 
   addToWishlist = (animal) => {
     if (this.wishlist.indexOf(animal) === -1) { //este IF evita que el mismo animal se cawrgue mas de una vez al hacer click
