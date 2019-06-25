@@ -26,11 +26,11 @@ class BlogsList extends React.Component {
     this.unBlog.comentario = event.target.value;
   }
 
-  limpiarForm = () =>{
-    
+  limpiarForm = () => {
+
   }
 
-  
+
   /* WriteFile(a,b)
   {
      var fso  = new ActiveXObject("Scripting.FileSystemObject");
@@ -42,10 +42,13 @@ class BlogsList extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col col-12 col-md-9">
+          <div className="col col-12 col-sm-9 col-md-9">          
+          <hr />  
             {this.props.blog.map(blog => <BlogCard blog={blog} key={blog.id} />)}
+            <hr />
+            <br />
           </div>
-          <div className="col col-12 col-md-3">
+          <div className="col col-12 col-sm-3 col-md-3">
             <div className="btn-group">
               <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal2">Nuevo</button>
             </div>
@@ -78,37 +81,41 @@ class BlogsList extends React.Component {
 
         {/*  MODAL */}
         <div className="modal fade" id="myModal2" role="dialog">
-          <div className="modal-dialog">
+          <div className="modal-dialog" id="ModalFormBlog">
 
             {/* MODAL CONTENT */}
             <div className="modal-content">
-              <form>
+              <form  id="ModalFormBlog" className="was-validated">
                 <div className="form-group">
-                  <label htmlFor="text">Titulo</label>
-                  <input type="text" className="form-control-2" onChange={this.changeTitulo}></input>
+                  <label htmlFor="uname">Titulo</label>
+                  <input type="text" className="form-control" id="titu" onChange={this.changeTitulo} placeholder="Ingrese un Titulo ..." name="titu" required></input>
+                  <div className="valid-feedback">Valid.</div>
+                  <div className="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="text">Familia</label>
-                  <input type="text" className="form-control-2" onChange={this.changeFamilia}></input>
+                  <input type="uname" className="form-control" id="fami" onChange={this.changeFamilia} placeholder="Ingrese Nombre/Apellido de su Familia" name="fami" required></input>
+                  <div className="valid-feedback">Valid.</div>
+                  <div className="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="inputFecha">Fecha de Adopcion</label>
-                  <input type="date" className="form-control-2" onChange={this.changeFecha}></input>
+                  <input type="date" className="form-control" id="fech" name="fech" onChange={this.changeFecha} required></input>
+                  <div className="valid-feedback">Valid.</div>
+                  <div className="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="text">Foto</label>
                   <br />
                   <br />
-                  <input id="file" type="file" className="form-control-2" accept="image/png, image/jpeg" onChange={this.changeFoto}/>                 
+                  <input id="file" type="file" className="form-control" accept="image/png, image/jpeg" onChange={this.changeFoto}/>                 
                 </div>
                 <div className="form-group">
                   <label htmlFor="text">Comentario</label>
-                  <textarea type="text" className="form-control-2" onChange={this.changeComentario}></textarea>
-                </div>
-                <div className="checkbox">
+                  <textarea type="text" className="form-control" placeholder="Comente porque adopto..." onChange={this.changeComentario} required></textarea>
                 </div>
                 <button type="button" className="btn btn-primary btn-block" onClick={(e) => this.props.addToBlog(this.unBlog, e)}>Guardar</button>
-              </form>
+              </form>             
               <button type="button" className="btn btn-warning btn-block" data-dismiss="modal" onClick={this.limpiarForm}>Close</button>
             </div>
           </div>
