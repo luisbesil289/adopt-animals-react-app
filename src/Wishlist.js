@@ -27,7 +27,7 @@ class Wishlist extends React.Component {
                         <hr />
                         <button type="button" onClick={(e) => this.props.removeToWishlist(this.state.unAnimal, e)} className="btn btn-warning">Quitar</button>
                         <hr />
-                        <button type="button" className="btn btn-success btn-block btn">Adoptar</button>
+                        <button type="button" className="btn btn-success btn-block btn" onClick={(e) => this.props.removeToAnimales(this.state.unAnimal, e)}>Adoptar</button>
                     </div>
                 </div>
             </div>

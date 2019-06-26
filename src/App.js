@@ -315,7 +315,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 4) {
-      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist} />;
+      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist} removeToAnimales={this.removeToAnimales}/>;
     }
 
     if (this.state.section === 5) {

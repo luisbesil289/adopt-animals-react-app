@@ -16,7 +16,7 @@ class ListsWishlist extends React.Component {
           </div>
           <div className="col col-12 col-sm-8 col-md-8">
             <div className="row">
-              {this.props.wishlist.map(animal => <Wishlist goToWishlist={this.props.goToWishlist} removeToWishlist={this.props.removeToWishlist} animal={animal} key={animal.id} />)}
+              {this.props.wishlist.map(animal => <Wishlist goToWishlist={this.props.goToWishlist} removeToWishlist={this.props.removeToWishlist} removeToAnimales={this.props.removeToAnimales} animal={animal} key={animal.id} />)}
             </div>
           </div>
           <aside className="serchVerticalR col col-12 col-sm-4 col-md-2 col-lg-2">           
