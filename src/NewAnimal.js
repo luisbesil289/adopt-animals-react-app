@@ -63,6 +63,7 @@ class NewAnimal extends React.Component {
             nombreContacto: this.state.nombreContacto,    
             telefonoContacto: this.state.telefonoContacto,
             emailContacto: this.state.emailContacto,
+            
             descripcion: this.state.descripcion            
         });
         // Reset form.

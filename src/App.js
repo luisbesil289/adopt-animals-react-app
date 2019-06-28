@@ -315,7 +315,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 4) {
-      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist} removeToAnimales={this.removeToAnimales}/>;
+      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist} removeToAnimales={this.removeToAnimales} />;
     }
 
     if (this.state.section === 5) {
@@ -323,7 +323,7 @@ class App extends React.Component {
     }
 
     if (this.state.section === 6) {
-      return <Felicidades animal={this.state.animal}/>;
+      return <Felicidades animal={this.state.animal} />;
     }
 
   }
@@ -346,7 +346,26 @@ class App extends React.Component {
     }
   }
 
-  newAnimal = (newAnimal) => {
+  /* newAnimal = (newAnimal) => {
+      this.animales.push({
+        id: this.getNextAnimalId(),
+        nombre: newAnimal.name,
+        tipo: newAnimal.tipo,
+        raza: newAnimal.raza,
+        barrio: newAnimal.barrio,
+        sexo: newAnimal.sexo,
+        fecha: newAnimal.fecha,
+        ojos: newAnimal.ojos,
+        pelo: newAnimal.pelo,
+        nombreContacto: newAnimal.nombreContacto,
+        telefonoContacto: newAnimal.telefonoContacto,
+        emailContacto: newAnimal.emailContacto,
+        descripcion: newAnimal.descripcion
+  
+      })
+    } */
+
+  /* newAnimal = (newAnimal) => {
     this.animales.push({
       id: this.getNextAnimalId(),
       nombre: newAnimal.name,
@@ -364,6 +383,44 @@ class App extends React.Component {
 
     })
   }
+  
+   */
+  newAnimal = (newAnimal) => {
+    this.animales.push({
+      id: this.getNextAnimalId(),
+      nombre: newAnimal.name,
+      tipo: newAnimal.tipo,
+      raza: newAnimal.raza,
+      barrio: newAnimal.barrio,
+      sexo: newAnimal.sexo,
+      fecha: newAnimal.fecha,
+      ojos: newAnimal.ojos,
+      pelo: newAnimal.pelo,
+      nombreContacto: newAnimal.nombreContacto,
+      telefonoContacto: newAnimal.telefonoContacto,
+      emailContacto: newAnimal.emailContacto,
+      foto:[
+        {
+          id: 1,
+          fotito: 'assets/carrusel_rita_01.jpg'
+        },
+        {
+          id: 2,
+          fotito: 'assets/carrusel_rita_02.jpg'
+        },
+        {
+          id: 3,
+          fotito: 'assets/carrusel_rita_03.jpg'
+        },
+        {
+          id: 4,
+          fotito: 'assets/carrusel_rita_04.jpg'
+        }],
+      descripcion: newAnimal.descripcion
+
+    })
+  }
+  
 
   removeToAnimales = (animal) => {
     var i = this.animales.indexOf(animal);
