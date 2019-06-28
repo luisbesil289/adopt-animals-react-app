@@ -157,7 +157,7 @@ class App extends React.Component {
               id: 4,
               fotito: 'assets/carrusel_burbuja_04.jpg'
             }],
-          descripcion: 'Toda si vida intentó ser bueno. Y es cierto que muchas veces falló... Despues de todo él era solo un humano, no era un perro como yo.'
+          descripcion: 'Toda su vida intentó ser bueno. Y es cierto que muchas veces falló... Despues de todo él era solo un humano, no era un perro como yo.'
         },
         {
           id: 5,
@@ -189,7 +189,7 @@ class App extends React.Component {
               id: 4,
               fotito: 'assets/carrusel_tupac_04.jpg'
             }],
-          descripcion: 'Es un hermoso y tierno gatito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón, a pesar de tener un pelaje abultado y blanco disfruta mucho recostarse bajo el sol de la tarde.'
+          descripcion: 'Es un hermoso y tierno gatito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón.'
         },
         {
           id: 6,
@@ -221,7 +221,7 @@ class App extends React.Component {
               id: 4,
               fotito: 'assets/carrusel_eminem_04.jpg'
             }],
-          descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+          descripcion: 'Perro amante de las flores sobre todo, las que se fuman. Amistoso por demás, se pasa las horas buscando con quien jugar.'
         },
         {
           id: 7,
