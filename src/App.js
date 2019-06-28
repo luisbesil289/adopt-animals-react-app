@@ -399,7 +399,7 @@ class App extends React.Component {
       nombreContacto: newAnimal.nombreContacto,
       telefonoContacto: newAnimal.telefonoContacto,
       emailContacto: newAnimal.emailContacto,
-      foto:[
+      foto: [
         {
           id: 1,
           fotito: 'assets/carrusel_rita_01.jpg'
@@ -420,7 +420,7 @@ class App extends React.Component {
 
     })
   }
-  
+
 
   removeToAnimales = (animal) => {
     var i = this.animales.indexOf(animal);
@@ -457,7 +457,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+        <nav className="navbar navbar-expand-md fixed-top bg-dark navbar-dark" id="menuPrincipal">
           <a className="navbar-brand" href="/Lists"><img src="assets/Logo-02.png" alt="Smiley face" height={53} width={70}></img></a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
