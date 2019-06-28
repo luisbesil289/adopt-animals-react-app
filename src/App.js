@@ -12,255 +12,252 @@ import Felicidades from './Felicidades';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.animales = [
-      {
+    this.state = ({
+      section: 1, // Seccion que inicia el listado de animales
+      wishlist: [], //Array que carga cada AnimalCard agregada a la lista Wishlist,
+      blog: [{ //Array con 2 blog de ejemplo
         id: 1,
-        nombre: 'Misha',
-        tipo: 'cat',
-        raza: 'Mau Egipcio',
-        barrio: 'Cordón',
-        sexo: 'H',
-        fecha: '2019-5-16',
-        ojos: 'Marrones',
-        pelo: 'Marrón',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_misha_01.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_misha_02.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_misha_03.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_misha_04.jpg'
-          }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-      },
-      {
-        id: 2,
-        nombre: 'Roberto',
-        tipo: 'dog',
-        raza: 'Caniche',
-        barrio: 'Cordón',
-        sexo: 'M',
-        fecha: '2019-3-16',
-        ojos: 'Marrones',
-        pelo: 'Blanco',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_roberto_04.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_roberto_01.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_roberto_02.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_roberto_03.jpg'
-          }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-      },
-      {
-        id: 3,
-        nombre: 'Alf',
-        tipo: 'dog',
-        raza: 'Golden retriever',
-        barrio: 'Centro',
-        sexo: 'M',
-        fecha: '2017-6-16',
-        ojos: 'Marrones',
-        pelo: 'Beije',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_alf_01.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_alf_02.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_alf_03.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_alf_04.jpg'
-          }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-      },
-      {
-        id: 4,
-        nombre: 'Burbuja',
-        tipo: 'dog',
-        raza: 'Boxer',
-        barrio: 'Centro',
-        sexo: 'H',
-        fecha: '2016-6-16',
-        ojos: 'Marrones',
-        pelo: 'Atigrado',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_burbuja_01.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_burbuja_02.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_burbuja_03.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_burbuja_04.jpg'
-          }],
-        descripcion: 'Toda si vida intentó ser bueno. Y es cierto que muchas veces falló... Despues de todo él era solo un humano, no era un perro como yo.'
-      },
-      {
-        id: 5,
-        nombre: 'Tupac',
-        tipo: 'cat',
-        raza: 'Siames',
-        barrio: 'Pocitos',
-        sexo: 'M',
-        fecha: '2015-6-16',
-        ojos: 'Azules',
-        pelo: 'Beige',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_tupac_01.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_tupac_02.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_tupac_03.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_tupac_04.jpg'
-          }],
-        descripcion: 'Es un hermoso y tierno gatito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón, a pesar de tener un pelaje abultado y blanco disfruta mucho recostarse bajo el sol de la tarde.'
-      },
-      {
-        id: 6,
-        nombre: 'Eminem',
-        tipo: 'dog',
-        raza: 'Pug',
-        barrio: 'Pocitos',
-        sexo: 'M',
-        fecha: '2014-6-16',
-        ojos: 'Marrones',
-        pelo: 'Negro',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_eminem_01.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_eminem_02.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_eminem_03.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_eminem_04.jpg'
-          }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-      },
-      {
-        id: 7,
-        nombre: 'Rita',
-        tipo: 'dog',
-        raza: 'chihuahua',
-        barrio: 'Cordón',
-        sexo: 'H',
+        titulo: 'Hermosos Gatitos',
+        familia: 'Rodriguez',
         fecha: '2013-6-16',
-        ojos: 'Negros',
-        pelo: 'Gris',
-        nombreContacto: 'Juan Carlos Rodriguez',
-        telefonoContacto: '094 236 444',
-        emailContacto: 'l.besil@hotmail.com',
-        foto: [
-          {
-            id: 1,
-            fotito: 'assets/carrusel_rita_01.jpg'
-          },
-          {
-            id: 2,
-            fotito: 'assets/carrusel_rita_02.jpg'
-          },
-          {
-            id: 3,
-            fotito: 'assets/carrusel_rita_03.jpg'
-          },
-          {
-            id: 4,
-            fotito: 'assets/carrusel_rita_04.jpg'
-          }],
-        descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
-      }
+        foto: 'assets/gatos_familia_01.jpg',
+        comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
+      }, {
+        id: 2,
+        titulo: 'Se agrando la familia',
+        familia: 'Lopez',
+        fecha: '2018-6-16',
+        foto: 'assets/perro_familia_01.jpg',
+        comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
+      }],
+      animales: [
+        {
+          id: 1,
+          nombre: 'Misha',
+          tipo: 'cat',
+          raza: 'Mau Egipcio',
+          barrio: 'Cordón',
+          sexo: 'H',
+          fecha: '2019-5-16',
+          ojos: 'Marrones',
+          pelo: 'Marrón',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_misha_01.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_misha_02.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_misha_03.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_misha_04.jpg'
+            }],
+          descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        },
+        {
+          id: 2,
+          nombre: 'Roberto',
+          tipo: 'dog',
+          raza: 'Caniche',
+          barrio: 'Cordón',
+          sexo: 'M',
+          fecha: '2019-3-16',
+          ojos: 'Marrones',
+          pelo: 'Blanco',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_roberto_04.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_roberto_01.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_roberto_02.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_roberto_03.jpg'
+            }],
+          descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        },
+        {
+          id: 3,
+          nombre: 'Alf',
+          tipo: 'dog',
+          raza: 'Golden retriever',
+          barrio: 'Centro',
+          sexo: 'M',
+          fecha: '2017-6-16',
+          ojos: 'Marrones',
+          pelo: 'Beije',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_alf_01.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_alf_02.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_alf_03.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_alf_04.jpg'
+            }],
+          descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        },
+        {
+          id: 4,
+          nombre: 'Burbuja',
+          tipo: 'dog',
+          raza: 'Boxer',
+          barrio: 'Centro',
+          sexo: 'H',
+          fecha: '2016-6-16',
+          ojos: 'Marrones',
+          pelo: 'Atigrado',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_burbuja_01.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_burbuja_02.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_burbuja_03.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_burbuja_04.jpg'
+            }],
+          descripcion: 'Toda si vida intentó ser bueno. Y es cierto que muchas veces falló... Despues de todo él era solo un humano, no era un perro como yo.'
+        },
+        {
+          id: 5,
+          nombre: 'Tupac',
+          tipo: 'cat',
+          raza: 'Siames',
+          barrio: 'Pocitos',
+          sexo: 'M',
+          fecha: '2015-6-16',
+          ojos: 'Azules',
+          pelo: 'Beige',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_tupac_01.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_tupac_02.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_tupac_03.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_tupac_04.jpg'
+            }],
+          descripcion: 'Es un hermoso y tierno gatito el cual es pequeñito y muy cariñoso, no es agresivo por el contrario es muy juguetón, a pesar de tener un pelaje abultado y blanco disfruta mucho recostarse bajo el sol de la tarde.'
+        },
+        {
+          id: 6,
+          nombre: 'Eminem',
+          tipo: 'dog',
+          raza: 'Pug',
+          barrio: 'Pocitos',
+          sexo: 'M',
+          fecha: '2014-6-16',
+          ojos: 'Marrones',
+          pelo: 'Negro',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_eminem_01.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_eminem_02.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_eminem_03.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_eminem_04.jpg'
+            }],
+          descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        },
+        {
+          id: 7,
+          nombre: 'Rita',
+          tipo: 'dog',
+          raza: 'chihuahua',
+          barrio: 'Cordón',
+          sexo: 'H',
+          fecha: '2013-6-16',
+          ojos: 'Negros',
+          pelo: 'Gris',
+          nombreContacto: 'Juan Carlos Rodriguez',
+          telefonoContacto: '094 236 444',
+          emailContacto: 'l.besil@hotmail.com',
+          foto: [
+            {
+              id: 1,
+              fotito: 'assets/carrusel_rita_01.jpg'
+            },
+            {
+              id: 2,
+              fotito: 'assets/carrusel_rita_02.jpg'
+            },
+            {
+              id: 3,
+              fotito: 'assets/carrusel_rita_03.jpg'
+            },
+            {
+              id: 4,
+              fotito: 'assets/carrusel_rita_04.jpg'
+            }],
+          descripcion: 'This is the awesome red car you always wanted to buy. This is the awesome red car you always wanted to buy.'
+        }
 
-    ];
-
-    this.wishlist = []; //Array que carga cada AnimalCard agregada a la lista Wishlist
-
-    this.blog = [{
-      id: 1,
-      titulo: 'Hermosos Gatitos',
-      familia: 'Rodriguez',
-      fecha: '2013-6-16',
-      foto: 'assets/gatos_familia_01.jpg',
-      comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
-    }, {
-      id: 2,
-      titulo: 'Se agrando la familia',
-      familia: 'Lopez',
-      fecha: '2018-6-16',
-      foto: 'assets/perro_familia_01.jpg',
-      comentario: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.'
-    }];
-
-    this.state = {
-      section: 1
-    };
+      ]
+    });
   }
 
   goToHome = () => {
@@ -303,7 +300,7 @@ class App extends React.Component {
 
   currentSection() {
     if (this.state.section === 1) {
-      return <Lists goToAnimal={this.goToAnimal} animales={this.animales} />;
+      return <Lists goToAnimal={this.goToAnimal} animales={this.state.animales} />;
     }
 
     if (this.state.section === 2) {
@@ -315,11 +312,11 @@ class App extends React.Component {
     }
 
     if (this.state.section === 4) {
-      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.wishlist} removeToWishlist={this.removeToWishlist} removeToAnimales={this.removeToAnimales} />;
+      return <ListsWishlist goToWishlist={this.goToWishlist} wishlist={this.state.wishlist} removeToWishlist={this.removeToWishlist} removeToAnimales={this.removeToAnimales} />;
     }
 
     if (this.state.section === 5) {
-      return <BlogsList blog={this.blog} addToBlog={this.addToBlog} />;
+      return <BlogsList blog={this.state.blog} addToBlog={this.addToBlog} />;
     }
 
     if (this.state.section === 6) {
@@ -329,7 +326,7 @@ class App extends React.Component {
   }
 
   getNextAnimalId() {
-    var productWithHighestId = this.animales.sort((a, b) => b.id - a.id)[0];
+    var productWithHighestId = this.state.animales.sort((a, b) => b.id - a.id)[0];
     if (productWithHighestId === undefined) {
       return 1; // List is empty, so use 1 as first product id.
     } else {
@@ -338,7 +335,7 @@ class App extends React.Component {
   }
 
   getNextBlogId() {
-    var productWithHighestId = this.blog.sort((a, b) => b.id - a.id)[0];
+    var productWithHighestId = this.state.blog.sort((a, b) => b.id - a.id)[0];
     if (productWithHighestId === undefined) {
       return 1; // List is empty, so use 1 as first product id.
     } else {
@@ -346,8 +343,9 @@ class App extends React.Component {
     }
   }
 
-  /* newAnimal = (newAnimal) => {
-      this.animales.push({
+  newAnimal = (newAnimal) => {
+    this.setState({
+      animales: [...this.state.animales, {
         id: this.getNextAnimalId(),
         nombre: newAnimal.name,
         tipo: newAnimal.tipo,
@@ -360,99 +358,60 @@ class App extends React.Component {
         nombreContacto: newAnimal.nombreContacto,
         telefonoContacto: newAnimal.telefonoContacto,
         emailContacto: newAnimal.emailContacto,
+        foto: [
+          {
+            id: 1,
+            fotito: 'assets/carrusel_rita_01.jpg'
+          },
+          {
+            id: 2,
+            fotito: 'assets/carrusel_rita_02.jpg'
+          },
+          {
+            id: 3,
+            fotito: 'assets/carrusel_rita_03.jpg'
+          },
+          {
+            id: 4,
+            fotito: 'assets/carrusel_rita_04.jpg'
+          }],
         descripcion: newAnimal.descripcion
-  
-      })
-    } */
-
-  /* newAnimal = (newAnimal) => {
-    this.animales.push({
-      id: this.getNextAnimalId(),
-      nombre: newAnimal.name,
-      tipo: newAnimal.tipo,
-      raza: newAnimal.raza,
-      barrio: newAnimal.barrio,
-      sexo: newAnimal.sexo,
-      fecha: newAnimal.fecha,
-      ojos: newAnimal.ojos,
-      pelo: newAnimal.pelo,
-      nombreContacto: newAnimal.nombreContacto,
-      telefonoContacto: newAnimal.telefonoContacto,
-      emailContacto: newAnimal.emailContacto,
-      descripcion: newAnimal.descripcion
-
-    })
+      }]
+    });
   }
-  
-   */
-  newAnimal = (newAnimal) => {
-    this.animales.push({
-      id: this.getNextAnimalId(),
-      nombre: newAnimal.name,
-      tipo: newAnimal.tipo,
-      raza: newAnimal.raza,
-      barrio: newAnimal.barrio,
-      sexo: newAnimal.sexo,
-      fecha: newAnimal.fecha,
-      ojos: newAnimal.ojos,
-      pelo: newAnimal.pelo,
-      nombreContacto: newAnimal.nombreContacto,
-      telefonoContacto: newAnimal.telefonoContacto,
-      emailContacto: newAnimal.emailContacto,
-      foto: [
-        {
-          id: 1,
-          fotito: 'assets/carrusel_rita_01.jpg'
-        },
-        {
-          id: 2,
-          fotito: 'assets/carrusel_rita_02.jpg'
-        },
-        {
-          id: 3,
-          fotito: 'assets/carrusel_rita_03.jpg'
-        },
-        {
-          id: 4,
-          fotito: 'assets/carrusel_rita_04.jpg'
-        }],
-      descripcion: newAnimal.descripcion
-
-    })
-  }
-
 
   removeToAnimales = (animal) => {
-    var i = this.animales.indexOf(animal);
-    this.animales.splice(i, 1);
+    var i = this.state.animales.indexOf(animal);
+    this.state.animales.splice(i, 1);
     this.goToFelicidades(animal);
   }
 
 
   addToWishlist = (animal) => {
-    if (this.wishlist.indexOf(animal) === -1) { //este IF evita que el mismo animal se cawrgue mas de una vez al hacer click
-      this.wishlist.push(animal)
+    if (this.state.wishlist.indexOf(animal) === -1) { //este IF evita que el mismo animal se cawrgue mas de una vez al hacer click
+      this.state.wishlist.push(animal)
     }
   }
 
   removeToWishlist = (animal) => {
-    var i = this.wishlist.indexOf(animal);
-    this.wishlist.splice(i, 1);
+    var i = this.state.wishlist.indexOf(animal);
+    this.state.wishlist.splice(i, 1);
     this.goToWishlist();
   }
 
   addToBlog = (newBlog) => {
-    this.blog.push({
-      id: this.getNextBlogId(),
-      titulo: newBlog.titulo,
-      familia: newBlog.familia,
-      fecha: newBlog.fecha,
-      foto: newBlog.foto,
-      comentario: newBlog.comentario
-    }
-    )
-    return <BlogsList blog={this.blog} addToBlog={this.addToBlog} />;
+    this.setState({
+      blog: [...this.state.blog, {
+        id: this.getNextBlogId(),
+        titulo: newBlog.titulo,
+        familia: newBlog.familia,
+        fecha: newBlog.fecha,
+        foto: 'assets/gatos_familia_01.jpg',
+        comentario: newBlog.comentario
+      }]
+    });
   }
+
 
   render() {
     return (
