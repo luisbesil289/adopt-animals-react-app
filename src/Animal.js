@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimalCarrusel from './AnimalCarrusel.js'
-import './animal.css'
+import './Animal.css'
 
 class Animal extends React.Component {
     constructor(props) {
