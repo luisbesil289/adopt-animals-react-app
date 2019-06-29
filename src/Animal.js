@@ -1,6 +1,23 @@
 import React from 'react';
+import AnimalCarrusel from './AnimalCarrusel.js'
+import './Animal.css'
 
 class Animal extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            unAnimal: this.props.unAnimal,
+            value: 'enabled'
+        };
+
+    }
+
+    handleSubmit = (event) => {
+       event.preventDefault();
+        this.props.addToWishlist(this.state.unAnimal);
+        this.setState({ value: '' });
+
+    };
 
     render() {
         return (
@@ -9,66 +26,55 @@ class Animal extends React.Component {
                     <div className="col col-sm-12 col-md-6">
                         <div className="card cardAnimal card-body">
                             <div className="cardFicha">
-                                <h4 className="card-title font-weight-bold">{this.props.nombre}</h4>
-                                <h4 className="card-title">{this.props.raza}</h4>
+                                <h2 className="card-title font-weight-bold">{this.state.unAnimal.nombre}</h2>
+                                <h4 className="card-title">{this.state.unAnimal.raza}</h4>
                             </div>
                             <hr />
                             <h4 className="card-text">Características</h4>
                             <ul className="card-text">
                                 <li>
-                                    <p>Nació el: 21/04/2019</p>
+                                    <p>Nació el: {this.state.unAnimal.fecha}</p>
                                 </li>
                                 <li>
-                                    <p>Color de pelo: Negro</p>
+                                    <p>Color de pelo: {this.state.unAnimal.pelo}</p>
                                 </li>
                                 <li>
-                                    <p>Color de ojos: Marrón</p>
+                                    <p>Color de ojos: {this.state.unAnimal.ojos}</p>
                                 </li>
                             </ul>
                             <hr />
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. Lorem ipsum dolor, sit amet
-                                consectetur adipisicing elit. Reprehenderit deserunt veniam tempora quibusdam blanditiis sequi sapiente voluptates dolorem fuga, repellendus corrupti dolore. Nostrum quos soluta explicabo, ea vel veniam optio tempore, fuga magnam
-                                odio ullam similique rem est? Cupiditate, eos.
-                    </p>
-                            <button type="button" className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.props.goToWishlist}>Agregar a la Wishlist</button>
+                            <p>{this.state.unAnimal.descripcion}</p>
+                            <button type="button" disabled={!this.state.value} className="btn btn-secondary btn-block shadow p-1 rounded" onClick={this.handleSubmit.bind(this)}>Agregar a la Wishlist</button>
                             <hr />
 
                             <h4 className="card-text">Datos del Contacto</h4>
                             <ul className="card-text">
                                 <li>
-                                    <p>Nombre: Luis Besil</p>
+                                    <p>Nombre: {this.state.unAnimal.nombreContacto}</p>
                                 </li>
                                 <li>
-                                    <p>Telefono / Celular: 094 236 444</p>
+                                    <p>Telefono / Celular: {this.state.unAnimal.telefonoContacto}</p>
                                 </li>
                                 <li>
-                                    <p>Email: l.besil@gmail.com</p>
+                                    <p>Email: {this.state.unAnimal.emailContacto}</p>
                                 </li>
                                 <li>
-                                    <p>Barrio: Parque Batlle</p>
+                                    <p>Barrio: {this.state.unAnimal.barrio}</p>
                                 </li>
                             </ul>
                             <button type="button" className="btn btn-info btn-block shadow p-2 rounded">Contactar</button>
                             <hr />
 
-                            <button type="button" className="btn btn-success btn-block shadow p-3 rounded">Adoptar</button>
+                            <button type="button" className="btn btn-success btn-block shadow p-3 rounded" onClick={(e) => this.props.removeToAnimales(this.state.unAnimal, e)}>Adoptar</button>
                         </div>
                     </div>
 
                     <div className="col col-sm-12 col-md-6">
                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner">
+                                {this.state.unAnimal.foto.map(foto => <AnimalCarrusel foto={foto} key={foto.id} />)}
                                 <div className="carousel-item active">
-                                    <img src="assets/carr_01.jpg" className="d-block w-100" alt="..."></img>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="assets/carr_02.jpg" className="d-block w-100" alt="..."></img>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="assets/carr_03.jpg" className="d-block w-100" alt="..."></img>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="assets/carr_04.jpg" className="d-block w-100" alt="..."></img>
+                                    <img src={this.state.unAnimal.foto[0].fotito} className="d-block w-100" alt="..."></img>
                                 </div>
                             </div>
                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

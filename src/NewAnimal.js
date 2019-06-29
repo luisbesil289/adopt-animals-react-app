@@ -7,49 +7,94 @@ class NewAnimal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          name: ''
+            name: ''
         };
     }
 
-    handleNameChange = (event) => {        
-        this.setState({ name: event.target.value});
-    }    
-    
+    handleNameChange = (event) => {
+        this.setState({ name: event.target.value });
+    }
+    handleTipoChange = (event) => {
+        this.setState({ tipo: event.target.value });
+    }
+    handleRazaChange = (event) => {
+        this.setState({ raza: event.target.value });
+    }
+    handleBarrioChange = (event) => {
+        this.setState({ barrio: event.target.value });
+    }
+    handleSexoChange = (event) => {
+        this.setState({ sexo: event.target.value });
+    }
+    handleFechaChange = (event) => {
+        this.setState({ fecha: event.target.value });
+    }
+    handleOjosChange = (event) => {
+        this.setState({ ojos: event.target.value });
+    }
+    handlePeloChange = (event) => {
+        this.setState({ pelo: event.target.value });
+    }
+    handleNombreContactoChange = (event) => {
+        this.setState({ nombreContacto: event.target.value });
+    }
+    handleTelefonoContactoChange = (event) => {
+        this.setState({ telefonoContacto: event.target.value });
+    }
+    handleEmailContactoChange = (event) => {
+        this.setState({ emailContacto: event.target.value });
+    }
+    handleDescripcionChange = (event) => {
+        this.setState({ descripcion: event.target.value });
+    }
+
     handleSubmit = (event) => {
         event.preventDefault(); // Ignore default browser action.
         // Send form data.
-        this.props.addNewProduct({
-          name: this.state.name
+        this.props.newAnimal({
+            name: this.state.name,
+            tipo: this.state.tipo,
+            raza: this.state.raza,
+            barrio: this.state.barrio,
+            sexo: this.state.sexo,
+            fecha: this.state.fecha,
+            ojos: this.state.ojos,
+            pelo: this.state.pelo,
+            nombreContacto: this.state.nombreContacto,    
+            telefonoContacto: this.state.telefonoContacto,
+            emailContacto: this.state.emailContacto,
+            
+            descripcion: this.state.descripcion            
         });
         // Reset form.
         this.setState({
-          name: ''
+            name: ''
         });
     }
 
     render() {
-        return (           
+        return (
             <div className="container formNuevoAnimal p-3 mb-5 bg-white rounded">
                 <div className="row justify-content-center">
-                    <div className="col col-sm-12 borderless">
+                    <div className="col col-12 col-sm-12 borderless">
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-row">
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputNombre">Nombre</label>
-                                    <input type="text" className="form-control" onChange={this.handleNameChange} placeholder="Nombre ..."></input>
-
+                                    <input type="text" className="form-control" onChange={this.handleNameChange} value={this.state.name} placeholder="Nombre ..."></input>
+                                   
                                 </div>
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputTipo">Tipo</label>
                                     <select onChange={this.handleTipoChange} className="custom-select custom-select-md mb-3">
-                                        <option defaultValue="3">todos...</option>
-                                        <option value="1">Perro</option>
-                                        <option value="2">Gato</option>
+                                        <option defaultValue={this.state.tipo}>todos...</option>
+                                        <option value="dog">Perro</option>
+                                        <option value="cat">Gato</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
                                     <label htmlFor="inputRaza">Raza</label>
-                                    <select onChange={this.handleRazaChange} className="custom-select custom-select-md mb-3">
+                                    <select onChange={this.handleRazaChange} value={this.state.raza} className="custom-select custom-select-md mb-3">
                                         <option defaultValue="3">Raza</option>
                                         <option value="1">Alano</option>
                                         <option value="2">Alaskan Malamute</option>
@@ -142,9 +187,9 @@ class NewAnimal extends React.Component {
                                         <option value="89">Yorkshire Terrier</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputEmail4">Barrio</label>
-                                    <select className="custom-select custom-select-md mb-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputBarrio">Barrio</label>
+                                    <select onChange={this.handleBarrioChange} value={this.state.barrio} className="custom-select custom-select-md mb-3">
                                         <option defaultValue="3">Barrio ...</option>
                                         <option value="1">Pocitos</option>
                                         <option value="2">Parque Batlle</option>
@@ -152,35 +197,34 @@ class NewAnimal extends React.Component {
                                 </div>
                             </div>
                             <div className="form-row">
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputAddress2">Sexo</label>
-                                    <select className="custom-select custom-select-md mb-3">
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputSexo">Sexo</label>
+                                    <select onChange={this.handleSexoChange} value={this.state.sexo} className="custom-select custom-select-md mb-3">
                                         <option defaultValue="3">Sexo ...</option>
                                         <option value="1">Macho</option>
                                         <option value="2">hembra</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputAddress2 col-md-4">Fecha de nacimiento</label>
-                                    <input type="date" className="custom-select custom-select-md mb-3" name="bday"></input>
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputFecha  col col-12 col-sm-6 col-md-3">Fecha de nacimiento</label>
+                                    <input type="date" onChange={this.handleFechaChange} className="custom-select custom-select-md mb-3" name="bday"></input>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputAddress2 col-md-4">Color de ojos</label>
-                                    <select className="custom-select custom-select-md mb-3">
-                                        <option defaultValue="3">Color ...</option>
-                                        <option value="1">Verdes</option>
-                                        <option value="2">Azules</option>
-                                        <option value="3">Castaños</option>
-                                        <option value="4">Diferente tonalidad</option>
-                                        <option value="5">Marrón oscuro</option>
-                                        <option value="6">Grises</option>
-                                        <option value="7">Negro</option>
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputOjos  col col-12 col-sm-6 col-md-3">Color de ojos</label>
+                                    <select onChange={this.handleOjosChange} className="custom-select custom-select-md mb-3">
+                                        <option defaultValue={this.state.ojos}>Color ...</option>
+                                        <option value="Verdes">Verdes</option>
+                                        <option value="Azules">Azules</option>
+                                        <option value="Castaños">Castaños</option>
+                                        <option value="Marrón">Marrón oscuro</option>
+                                        <option value="Grises">Grises</option>
+                                        <option value="Negro">Negro</option>
                                     </select>
                                 </div>
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="inputAddress2 col-md-4">Color de pelo</label>
-                                    <select className="custom-select custom-select-md mb-3">
-                                        <option defaultValue="3">Color ...</option>
+                                <div className="form-group col col-12 col-sm-6 col-md-3">
+                                    <label htmlFor="inputPelo  col col-12 col-sm-6 col-md-3">Color de pelo</label>
+                                    <select onChange={this.handlePeloChange} className="custom-select custom-select-md mb-3">
+                                        <option defaultValue={this.state.pelo}>Color ...</option>
                                         <option value="1">Blanco</option>
                                         <option value="2">Crema</option>
                                         <option value="3">Beige</option>
@@ -188,36 +232,33 @@ class NewAnimal extends React.Component {
                                         <option value="5">Gris</option>
                                         <option value="6">Negro</option>
                                         <option value="7">Manchas</option>
-                                        <option value="7">Atigrado</option>
+                                        <option value="8">Atigrado</option>
                                     </select>
                                 </div>
                             </div>
                             <div className="form-row">
-                                <div className="form-group col-md-4">
-                                    <label htmlFor="inputCity">Nombre de contacto</label>
-                                    <input type="text" className="form-control" id="inputCity" placeholder="Nombre ..."></input>
+                                <div className="form-group col col-12">
+                                    <label htmlFor="inputnameContact">Nombre de contacto</label>
+                                    <input type="text" value={this.state.value} onChange={this.handleNombreContactoChange} className="form-control"></input>
                                 </div>
-                                <div className="form-group col-md-4">
-                                    <label htmlFor="inputState">Teléfono de contacto</label>
-                                    <input type="text" className="form-control" id="inputCity" placeholder="Teléfono ..."></input>
+                                <div className="form-group col col-6">
+                                    <label htmlFor="inputPhoneContact">Teléfono de contacto</label>
+                                    <input type="text" value={this.state.value} onChange={this.handleTelefonoContactoChange} className="form-control" placeholder="Teléfono ..."></input>
                                 </div>
-                                <div className="form-group col-md-4">
-                                    <label htmlFor="inputZip">Email de contacto</label>
-                                    <input type="email" className="form-control" id="inputZip" placeholder="Email ..."></input>
+                                <div className="form-group col col-6">
+                                    <label htmlFor="inputEmail">Email de contacto</label>
+                                    <input type="email" value={this.state.value} onChange={this.handleEmailContactoChange} className="form-control" placeholder="Email ..."></input>
                                 </div>
                             </div>
                             <div className="form-group">
                                 <div className="mb-3">
-                                    <label htmlFor="validationTextarea">Descripción</label>
-                                    <textarea className="form-control" id="validationTextarea" placeholder="Descripción ..."></textarea>
-                                    <div className="invalid-feedback">
-                                        Please enter a message in the textarea.
-                                </div>
+                                    <label htmlFor="validationDescripcion">Descripción</label>
+                                    <textarea onChange={this.handleDescripcionChange} value={this.state.descripcion} className="form-control" placeholder="Descripción ..."></textarea>
+                                    
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-primary">Registar</button>
+                            <button type="submit" className="btn btn-primary">Guardar</button>
                         </form>
-
                     </div>
                 </div>
             </div>

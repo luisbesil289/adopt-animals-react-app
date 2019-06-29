@@ -1,0 +1,25 @@
+.serchVerticalL {
+  border-right: 2px solid #b3d7ff;
+  text-align: left;
+  background-color: #343a40!important;
+  color: rgb(255, 255, 255);
+}
+
+.serchVerticalL h4 {
+  margin-top: 20px;
+}
+
+h4 {
+  text-align: justify;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 7.5em;
+  height: 1.5em;
+  vertical-align: auto;
+  content: "";
+  background: no-repeat center center;
+  background-size: 142% 133%;
+ /*  background-color: white; */
+}

@@ -1,5 +1,5 @@
 body {
-
+  margin-top: 60px;  
   background-image: no-repeat;
   font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   text-rendering: optimizeLegibility;
@@ -7,44 +7,25 @@ body {
 }
 
 @media all and (max-width: 520px) {
-  body {
+  body {    
       background-color: white;
       font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
   }
-  /* arrow que va va al inicio de la pantalla, en Responsive menor de 520  */
-  .flotante {
-      width: 100%;
-      display: scroll;
-      position: relative;
-      top: 34px;
-      left: 3%;
-      margin-top: 10px;
-  }
 }
 
 @media all and (max-width: 699px) and (min-width: 520px) {
-  body {
-      
-      font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-  }
-  .flotante {
-      display: none;
+  body {    
+      font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";     
   }
 }
 
 @media all and (min-width: 670px) {
-  body {
-      
+  body {    
       font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
-  }
-  .flotante {
-      display: none;
   }
 }
 
@@ -54,7 +35,7 @@ h1 {
   color: rgb(0, 111, 175);
 }
 
-h1 {
+h2 {
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: rgb(0, 111, 175);
@@ -77,20 +58,6 @@ h5 {
   color: rgb(0, 111, 175);
 }
 
-body p {
-  font-family: Vegur, 'PT Sans', Verdana, sans-serif;
-  font-size: 14px;
-  text-align: justify;
-  text-indent: 10px;
-  line-height: 20px;
-  color: rgb(0, 50, 78);
-}
-
-.cardLista {
-  margin-bottom: 1.5em;
-  box-shadow: 0 14px 20px 4px rgba(0, 0, 0, 0.85);
-}
-
 .cardAnimal {
   margin-bottom: 140px;
   width: 100%;
@@ -98,23 +65,6 @@ body p {
   box-shadow: 0 14px 20px 4px rgba(0, 0, 0, 0.45);
 }
 
-.card .card-body {
-  background-color: rgb(240, 251, 255);
-  
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: right;
-}
-
-.imagen {
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  opacity: 0.2;
-  width: 100%;
-  z-index: 1;
-  float: none;
-}
 
 .miniaturas {
   margin-top: 20px;
@@ -150,13 +100,6 @@ body p {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.serchVerticalL {
-  border-right: 2px solid #b3d7ff;
-  text-align: left;
-  background-color: #343a40!important;
-  color: rgb(255, 255, 255);
 }
 
 .serchVerticalR {
@@ -208,3 +151,5 @@ footer .copyright {
   opacity: .5;
   line-height: 1.7;
 }
+
+
